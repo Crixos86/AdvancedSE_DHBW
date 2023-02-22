@@ -44,10 +44,10 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>Praxisbericht.bcf</file>
+      <file>Programmentwurf.bcf</file>
     </provides>
     <requires type="dynamic">
-      <file>Praxisbericht.bbl</file>
+      <file>Programmentwurf.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -65,19 +65,19 @@
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
-      <infile>Praxisbericht</infile>
+      <infile>Programmentwurf</infile>
     </cmdline>
     <input>
-      <file>Praxisbericht.bcf</file>
+      <file>Programmentwurf.bcf</file>
     </input>
     <output>
-      <file>Praxisbericht.bbl</file>
+      <file>Programmentwurf.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>Praxisbericht.bbl</file>
+      <file>Programmentwurf.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>Praxisbericht.bcf</file>
+      <file>Programmentwurf.bcf</file>
     </requires>
     <requires type="editable">
       <file>Inhalt/literatur.bib</file>

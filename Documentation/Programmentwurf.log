@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.14)  4 JAN 2023 17:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.14)  22 FEB 2023 16:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/crixos/Documents/AdvancedSE_DHBW/Documentation/Praxisbericht.tex
-(/Users/crixos/Documents/AdvancedSE_DHBW/Documentation/Praxisbericht.tex
+**/Users/crixos/Documents/AdvancedSE_DHBW/Documentation/Programmentwurf.tex
+(/Users/crixos/Documents/AdvancedSE_DHBW/Documentation/Programmentwurf.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (./Inhalt/00_Latex/praeambel.tex (/usr/local/texlive/2022/texmf-dist/tex/latex/koma-script/scrreprt.cls
 Document Class: scrreprt 2021/11/13 v3.35 KOMA-Script document class (report)
@@ -1283,8 +1283,8 @@ Package csquotes Info: ... found 'babel' package.
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 48.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (./Praxisbericht.aux (./Inhalt/01_Standard/titelseite.aux) (./Inhalt/02_Abstract/abstract-de.aux) (./Inhalt/03_Verzeichnisse/abkuerzungen.aux) (./Inhalt/05_Inhalt/01_einführung.aux) (./Inhalt/05_Inhalt/02_cleanArchitecture.aux) (./Inhalt/05_Inhalt/03_SOLID.aux) (./Inhalt/05_Inhalt/04_principals.aux) (./Inhalt/05_Inhalt/05_unitTests.aux) (./Inhalt/05_Inhalt/06_DDD.aux) (./Inhalt/05_Inhalt/07_refactoring.aux) (./Inhalt/05_Inhalt/08_designPatterns.aux))
-\openout1 = `Praxisbericht.aux'.
+) (./Programmentwurf.aux (./Inhalt/01_Standard/titelseite.aux) (./Inhalt/02_Abstract/abstract-de.aux) (./Inhalt/03_Verzeichnisse/abkuerzungen.aux) (./Inhalt/05_Inhalt/01_einführung.aux) (./Inhalt/05_Inhalt/02_cleanArchitecture.aux) (./Inhalt/05_Inhalt/03_SOLID.aux) (./Inhalt/05_Inhalt/04_principals.aux) (./Inhalt/05_Inhalt/05_unitTests.aux) (./Inhalt/05_Inhalt/06_DDD.aux) (./Inhalt/05_Inhalt/07_refactoring.aux) (./Inhalt/05_Inhalt/08_designPatterns.aux))
+\openout1 = `Programmentwurf.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
 LaTeX Font Info:    ... okay on input line 48.
@@ -1387,9 +1387,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 48.
 LaTeX Info: Redefining \pageref on input line 48.
 LaTeX Info: Redefining \nameref on input line 48.
- (./Praxisbericht.out) (./Praxisbericht.out)
+ (./Programmentwurf.out) (./Programmentwurf.out)
 \@outlinefile=\write5
-\openout5 = `Praxisbericht.out'.
+\openout5 = `Programmentwurf.out'.
 
 Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           Using `bookmark' together with `hyperref' is recommended,
@@ -1426,11 +1426,11 @@ File: german.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout3 = `Praxisbericht.bcf'.
+\openout3 = `Programmentwurf.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Praxisbericht.bbl' found.
- (./Praxisbericht.bbl)
+Package biblatex Info: ... file 'Programmentwurf.bbl' found.
+ (./Programmentwurf.bbl)
 Package biblatex Info: Reference section=0 on input line 48.
 Package biblatex Info: Reference segment=0 on input line 48.
 \c@lstlisting=\count503
@@ -1525,7 +1525,7 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
 
 ])
 Package tocbasic Info: character protrusion at toc deactivated on input line 72.
- (./Praxisbericht.toc
+ (./Programmentwurf.toc
 Package tocbasic Info: Using my definition of `\numberline' on input line 2.
 Package tocbasic Info: Using my definition of `\numberline' on input line 3.
 Package tocbasic Info: Using my definition of `\numberline' on input line 4.
@@ -1572,7 +1572,7 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 44.
 Package tocbasic Info: Using my definition of `\numberline' on input line 45.
 )
 \tf@toc=\write6
-\openout6 = `Praxisbericht.toc'.
+\openout6 = `Programmentwurf.toc'.
 
  [3]
 \openout2 = `Inhalt/03_Verzeichnisse/abkuerzungen.aux'.
@@ -1703,9 +1703,9 @@ LaTeX Warning: Hyper reference `acro:XSL' on page IV undefined on input line 27.
 
 ]
 Package tocbasic Info: character protrusion at lof deactivated on input line 79.
- (./Praxisbericht.lof)
+ (./Programmentwurf.lof)
 \tf@lof=\write7
-\openout7 = `Praxisbericht.lof'.
+\openout7 = `Programmentwurf.lof'.
 
  [5
 
@@ -1713,17 +1713,17 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 79.
 
 ]
 Package tocbasic Info: character protrusion at lot deactivated on input line 80.
- (./Praxisbericht.lot)
+ (./Programmentwurf.lot)
 \tf@lot=\write8
-\openout8 = `Praxisbericht.lot'.
+\openout8 = `Programmentwurf.lot'.
 
  [6
 
 ]
 Package tocbasic Info: character protrusion at lol deactivated on input line 82.
- (./Praxisbericht.lol)
+ (./Programmentwurf.lol)
 \tf@lol=\write9
-\openout9 = `Praxisbericht.lol'.
+\openout9 = `Programmentwurf.lol'.
 
  [7
 
@@ -1810,26 +1810,26 @@ No file Inhalt/05_Inhalt/08_designPatterns.tex.
 
 LaTeX Warning: Empty bibliography on input line 109.
 
-(./Praxisbericht.aux (./Inhalt/01_Standard/titelseite.aux) (./Inhalt/02_Abstract/abstract-de.aux) (./Inhalt/03_Verzeichnisse/abkuerzungen.aux) (./Inhalt/05_Inhalt/01_einführung.aux) (./Inhalt/05_Inhalt/02_cleanArchitecture.aux) (./Inhalt/05_Inhalt/03_SOLID.aux) (./Inhalt/05_Inhalt/04_principals.aux) (./Inhalt/05_Inhalt/05_unitTests.aux) (./Inhalt/05_Inhalt/06_DDD.aux) (./Inhalt/05_Inhalt/07_refactoring.aux) (./Inhalt/05_Inhalt/08_designPatterns.aux))
+(./Programmentwurf.aux (./Inhalt/01_Standard/titelseite.aux) (./Inhalt/02_Abstract/abstract-de.aux) (./Inhalt/03_Verzeichnisse/abkuerzungen.aux) (./Inhalt/05_Inhalt/01_einführung.aux) (./Inhalt/05_Inhalt/02_cleanArchitecture.aux) (./Inhalt/05_Inhalt/03_SOLID.aux) (./Inhalt/05_Inhalt/04_principals.aux) (./Inhalt/05_Inhalt/05_unitTests.aux) (./Inhalt/05_Inhalt/06_DDD.aux) (./Inhalt/05_Inhalt/07_refactoring.aux) (./Inhalt/05_Inhalt/08_designPatterns.aux))
 
 LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `Praxisbericht.out' has not changed.
+Package rerunfilecheck Info: File `Programmentwurf.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package logreq Info: Writing requests to 'Praxisbericht.run.xml'.
-\openout1 = `Praxisbericht.run.xml'.
+Package logreq Info: Writing requests to 'Programmentwurf.run.xml'.
+\openout1 = `Programmentwurf.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
  48474 strings out of 478268
- 987999 string characters out of 5846347
- 1851395 words of memory out of 5000000
+ 988077 string characters out of 5846347
+ 1851407 words of memory out of 5000000
  65745 multiletter control sequences out of 15000+600000
  524174 words of font info for 103 fonts, out of 8000000 for 9000
  1145 hyphenation exceptions out of 8191
- 113i,19n,116p,10752b,2668s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 113i,19n,116p,10754b,2668s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsso10.pfb>
-Output written on Praxisbericht.pdf (15 pages, 165698 bytes).
+Output written on Programmentwurf.pdf (15 pages, 165698 bytes).
 PDF statistics:
  332 PDF objects out of 1000 (max. 8388607)
  299 compressed objects within 3 object streams
