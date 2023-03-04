@@ -1,20 +1,12 @@
 package de.dhbw.ase.simpsons.domain.charakters;
 
-public class Lisa {
-    private final String name = "Lisa";
-    private final int age = 8;
-    private final String job = "Student";
+public class Lisa extends Character implements CharacterAction{
+    private String name = "Lisa";
+    private int age = 8;
+    private String job = "Student";
 
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public String getJob() {
-        return job;
+    public Lisa() {
+        super("Lisa", 8, "Student");
     }
 
     public void playSaxophone() {
@@ -23,5 +15,10 @@ public class Lisa {
 
     public void solveProblems() {
         System.out.println(name + " is solving problems.");
+    }
+
+    @Override
+    public void introduce() {
+        System.out.printf("Hi, my name is %s and I am %d years old. I am a %s.", name, age, job);
     }
 }

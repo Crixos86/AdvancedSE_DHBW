@@ -1,20 +1,12 @@
 package de.dhbw.ase.simpsons.domain.charakters;
 
-public class Marge {
-    private final String name = "Marge";
-    private final int age = 34;
-    private final String job = "Housewife";
+public class Marge extends Character implements CharacterAction{
+    private String name = "Marge";
+    private int age = 34;
+    private String job = "Housewife";
 
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public String getJob() {
-        return job;
+    public Marge() {
+        super("Marge", 34, "Housewife");
     }
 
     public void bakeCake() {
@@ -23,5 +15,10 @@ public class Marge {
 
     public void careForChildren() {
         System.out.println(name + " is caring for the children.");
+    }
+
+    @Override
+    public void introduce() {
+        System.out.printf("Hi, my name is %s and I am %d years old. I am a %s.", name, age, job);
     }
 }
