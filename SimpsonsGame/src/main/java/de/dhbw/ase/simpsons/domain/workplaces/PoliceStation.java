@@ -1,31 +1,23 @@
 package de.dhbw.ase.simpsons.domain.workplaces;
 
-public class PoliceStation {
+import de.dhbw.ase.simpsons.application.WorkplaceFeatures;
+
+public class PoliceStation extends Workplaces implements WorkplaceFeatures {
     private final String name = "Springfield Police Station";
     private final String location = "999 Maple Street";
     private final int numberOfOfficers = 20;
     private final String chief = "Chief Clancy Wiggum";
 
-    public String getName() {
-        return name;
+    public PoliceStation() {
+        super("Springfield Police Station", "999 Maple Street", 20, "Chief Clancy Wiggum");
     }
 
-    public String getLocation() {
-        return location;
-    }
-
-    public int getNumberOfOfficers() {
-        return numberOfOfficers;
-    }
-
-    public String getChief() {
-        return chief;
-    }
-
+    @Override
     public void listInformation() {
-        System.out.println(name + " located at " + location + " is run by " + chief + " and has " + numberOfOfficers + " officers.");
+        System.out.printf("%s located at %s, %s is in command and has %d officers.%n", name, location, chief, numberOfOfficers);
     }
 
+    @Override
     public void takeATour() {
         System.out.println("Take a tour of the Springfield Police Station and meet Chief Clancy Wiggum and his officers.");
     }

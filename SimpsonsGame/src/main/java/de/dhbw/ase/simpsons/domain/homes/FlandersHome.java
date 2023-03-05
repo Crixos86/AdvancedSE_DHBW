@@ -1,33 +1,25 @@
 package de.dhbw.ase.simpsons.domain.homes;
 
-public class FlandersHome {
-    private final String streetName = "744 Evergreen Terrace";
+import de.dhbw.ase.simpsons.application.HomeFeatures;
+
+public class FlandersHome extends Home implements HomeFeatures {
+    private final String address = "744 Evergreen Terrace";
     private final int numberOfRooms = 8;
     private final int numberOfBathrooms = 4;
     private final int squareFootage = 3500;
 
-    public String getStreetName() {
-        return streetName;
+    public FlandersHome() {
+        super("744 Evergreen Terrace", 8, 4, 3500);
     }
 
-    public int getNumberOfRooms() {
-        return numberOfRooms;
-    }
-
-    public int getNumberOfBathrooms() {
-        return numberOfBathrooms;
-    }
-
-    public int getSquareFootage() {
-        return squareFootage;
-    }
-
+    @Override
     public void listFeatures() {
-        System.out.println(streetName + " has " + numberOfRooms + " rooms, " + numberOfBathrooms + " bathrooms and is " + squareFootage + " square feet in size.");
+        System.out.printf("Ned Flanders' home has %d rooms, %d bathrooms and is %d square feet in size.%n", numberOfRooms, numberOfBathrooms, squareFootage);
     }
 
-    public void openForTour() {
-        System.out.println(streetName + " is open for tour.");
+    @Override
+    public void takeTour() {
+        System.out.println("Hi diddly ho neighborinos!");
     }
 }
 

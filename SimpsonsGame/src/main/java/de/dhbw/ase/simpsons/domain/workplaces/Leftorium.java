@@ -1,32 +1,25 @@
 package de.dhbw.ase.simpsons.domain.workplaces;
 
-public class Leftorium {
+import de.dhbw.ase.simpsons.application.WorkplaceFeatures;
+
+public class Leftorium extends Workplaces implements WorkplaceFeatures {
     private final String name = "The Leftorium";
     private final String location = "Springfield Mall";
-    private final int numberOfProducts = 500;
+    private int numberOfProducts = 500;
     private final String owner = "Ned Flanders";
 
-    public String getName() {
-        return name;
+    public Leftorium() {
+        super("The Leftorium", "Springfield Mall", 500, "Ned Flanders");
     }
 
-    public String getLocation() {
-        return location;
-    }
 
-    public int getNumberOfProducts() {
-        return numberOfProducts;
-    }
-
-    public String getOwner() {
-        return owner;
-    }
-
+    @Override
     public void listInformation() {
-        System.out.println(name + " located at " + location + " is owned by " + owner + " and has " + numberOfProducts + " left-handed products.");
+        System.out.printf("%s located at %s is owned by %s and has %d products.%n", name, location, owner, numberOfProducts);
     }
 
+    @Override
     public void takeATour() {
-        System.out.println("Take a tour of the Left-Hander's Supply Co. and browse through their extensive collection of left-handed products.");
+        System.out.println("Take a tour of the Leftorium and meet Ned Flanders and his employees.");
     }
 }

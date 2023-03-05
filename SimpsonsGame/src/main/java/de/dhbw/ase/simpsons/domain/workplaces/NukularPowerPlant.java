@@ -1,65 +1,27 @@
 package de.dhbw.ase.simpsons.domain.workplaces;
 
-import de.dhbw.ase.simpsons.application.Question;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import de.dhbw.ase.simpsons.application.WorkplaceFeatures;
 
-public  class NukularPowerPlant   {
+public  class NukularPowerPlant extends Workplaces implements WorkplaceFeatures {
     private final String name = "Springfield Nuclear Power Plant";
     private final String location = "1235 Springfield Heights";
     private final int numberOfEmployees = 200;
     private final String owner = "Mr. Burns";
 
-    private Question excludedWorkplace;
     public NukularPowerPlant() {
-        this.excludedWorkplace = new Question() {
-            @Override
-            public String askQuestion() {
-                return "Möchten Sie an einem strahlend schönen Arbeitsplatz arbeiten, " +
-                        "an dem Sicherheit nicht allzu ernst genommen wird?";
-            }
-
-            @Override
-            public List<String> getExcludedWorkplaces(String answer) {
-                if (answer.equals("yes")) {
-                    return Collections.emptyList();
-                } else {
-                    return Arrays.asList("NukularPowerPlant");
-                }
-            }
-
-            @Override
-            public List<String> getAnswers() {
-                return Arrays.asList("yes", "no");
-            }
-        };
+        super("Springfield Nuclear Power Plant", "1235 Springfield Heights", 200, "Mr. Burns");
     }
 
 
-    public String getName() {
-        return name;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public int getNumberOfEmployees() {
-        return numberOfEmployees;
-    }
-
-    public String getOwner() {
-        return owner;
-    }
-
+    @Override
     public void listInformation() {
-        System.out.println(name + " located at " + location + " is owned by " + owner + " and has " + numberOfEmployees + " employees.");
+        System.out.printf("%s located at %s is owned by %s and has %d employees.%n", name, location, owner, numberOfEmployees);
     }
 
+    @Override
     public void takeATour() {
-        System.out.println("Take a tour of Springfield's Nuclear Power Plant and see where Homer Simpson works.");
+        System.out.println("Take a tour of the Springfield Nuclear Power Plant and meet Mr. Burns and his employees.");
     }
 }
 

@@ -1,33 +1,24 @@
 package de.dhbw.ase.simpsons.domain.homes;
 
-public class NelsonsTrailer {
-    private final String location = "Unknown";
+import de.dhbw.ase.simpsons.application.HomeFeatures;
+
+public class NelsonsTrailer extends Home implements HomeFeatures {
+    private final String address = "Unknown";
     private final int numberOfRooms = 2;
     private final int numberOfBathrooms = 1;
     private final int squareFootage = 800;
 
-    public String getLocation() {
-        return location;
+    public NelsonsTrailer() {
+        super("Unknown", 2, 1, 800);
     }
 
-    public int getNumberOfRooms() {
-        return numberOfRooms;
-    }
-
-    public int getNumberOfBathrooms() {
-        return numberOfBathrooms;
-    }
-
-    public int getSquareFootage() {
-        return squareFootage;
-    }
-
+    @Override
     public void listFeatures() {
-        System.out.println("Nelson's trailer has " + numberOfRooms + " rooms, " + numberOfBathrooms + " bathrooms and is " + squareFootage + " square feet in size.");
+        System.out.printf("Nelson's trailer has %d rooms, %d bathrooms and is %d square feet in size.%n", numberOfRooms, numberOfBathrooms, squareFootage);
     }
 
-    public void takeATour() {
-        System.out.println("Come and see inside Nelson's home on wheels.");
+    @Override
+    public void takeTour() {
+        System.out.println("In Nelson's trailer you will be greeted with a hearty underpants ripper");
     }
 }
-

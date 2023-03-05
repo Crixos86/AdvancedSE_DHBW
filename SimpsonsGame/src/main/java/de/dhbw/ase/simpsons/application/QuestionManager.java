@@ -1,24 +1,21 @@
 package de.dhbw.ase.simpsons.application;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
-public class QuestionManager {
+import de.dhbw.ase.simpsons.adapters.Question;
 
-    private List<String> excludedWorkplaces;
-    private List<Question> questions;
+import java.util.Scanner;
 
-    public QuestionManager(List<Question> questions) {
-        this.questions = questions;
-        this.excludedWorkplaces = new ArrayList<>();
+public class QuestionManager implements Question {
+
+    private final Scanner scanner;
+
+    public QuestionManager() {
+        scanner = new Scanner(System.in);
     }
 
-    public void start() {
-        for (Question question : questions) {
-            String answer = question.askQuestion();
-            excludedWorkplaces.addAll(question.getExcludedWorkplaces(answer));
-        }
+    @Override
+    public String ask(String question) {
+        System.out.println(question + "");
+        return scanner.nextLine();
     }
-
 }

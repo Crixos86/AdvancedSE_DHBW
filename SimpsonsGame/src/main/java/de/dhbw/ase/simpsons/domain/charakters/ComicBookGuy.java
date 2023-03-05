@@ -1,7 +1,9 @@
 package de.dhbw.ase.simpsons.domain.charakters;
 
-public class ComicBookGuy extends Character implements CharacterAction{
-    private String name = "Comic Book Guy";
+import de.dhbw.ase.simpsons.application.CharacterAction;
+
+public class ComicBookGuy extends Character implements CharacterAction {
+    private final String name = "Comic Book Guy";
     private int age = 45;
     private String job = "Comic Book Store Owner";
 
@@ -20,5 +22,10 @@ public class ComicBookGuy extends Character implements CharacterAction{
     @Override
     public void introduce() {
         System.out.printf("Hi, my name is %s and I am %d years old. I am a %s.", name, age, job);
+    }
+
+    @Override
+    public void giveQuote() {
+        System.out.println("I'm not a nerd, I'm a collector of rare and valuable things.");
     }
 }

@@ -1,33 +1,26 @@
 package de.dhbw.ase.simpsons.domain.workplaces;
 
-public class SpringfieldSchool {
+import de.dhbw.ase.simpsons.application.WorkplaceFeatures;
+
+public class SpringfieldSchool extends Workplaces implements WorkplaceFeatures {
     private final String name = "Springfield Elementary School";
     private final String location = "1313 Mockingbird Lane";
     private final int numberOfStudents = 500;
     private final int numberOfTeachers = 30;
 
-    public String getName() {
-        return name;
+    public SpringfieldSchool() {
+        super("Springfield Elementary School", "1313 Mockingbird Lane", 500, "Principal Seymour Skinner");
     }
 
-    public String getLocation() {
-        return location;
-    }
 
-    public int getNumberOfStudents() {
-        return numberOfStudents;
-    }
-
-    public int getNumberOfTeachers() {
-        return numberOfTeachers;
-    }
-
+    @Override
     public void listInformation() {
-        System.out.println(name + " located at " + location + " has " + numberOfStudents + " students and " + numberOfTeachers + " teachers.");
+        System.out.printf("%s located at %s has %d students and %d teachers.%n", name, location, numberOfStudents, numberOfTeachers);
     }
 
+    @Override
     public void takeATour() {
-        System.out.println("Take a tour of Springfield Elementary School and see where Bart, Lisa and Maggie Simpson go to school.");
+        System.out.println("Take a tour of the Springfield Elementary School and meet Principal Seymour Skinner and his teachers.");
     }
 }
 

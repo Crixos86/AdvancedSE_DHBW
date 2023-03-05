@@ -1,38 +1,26 @@
 package de.dhbw.ase.simpsons.domain.homes;
 
-public class SkinnersHome {
+import de.dhbw.ase.simpsons.application.HomeFeatures;
+
+public class SkinnersHome extends Home implements HomeFeatures {
     private final String address = "330 Pikeland Avenue";
-    private final int numberOfRooms = 3;
-    private final int numberOfBathrooms = 1;
-    private final int squareFootage = 1200;
-    private final String mother = "Agnes Skinner";
+    private int numberOfRooms = 3;
+    private int numberOfBathrooms = 1;
+    private int squareFootage = 1200;
 
-    public String getAddress() {
-        return address;
+    public SkinnersHome() {
+        super("330 Pikeland Avenue", 3, 1, 1200);
     }
 
-    public int getNumberOfRooms() {
-        return numberOfRooms;
-    }
 
-    public int getNumberOfBathrooms() {
-        return numberOfBathrooms;
-    }
-
-    public int getSquareFootage() {
-        return squareFootage;
-    }
-
-    public String getMother() {
-        return mother;
-    }
-
+    @Override
     public void listFeatures() {
-        System.out.println(address + " has " + numberOfRooms + " rooms, " + numberOfBathrooms + " bathrooms, is " + squareFootage + " square feet in size and is lived in by " + mother + " and Seymour Skinner.");
+        System.out.printf("Seymour Skinner's home has %d rooms, %d bathrooms and is %d square feet in size.%n", numberOfRooms, numberOfBathrooms, squareFootage);
     }
 
-    public void takeATour() {
-        System.out.println("Take a tour of Seymour Skinner's childhood home, now shared with his mother " + mother + ".");
+    @Override
+    public void takeTour() {
+        System.out.println("Seymour Skinner's home is a nice litte home but it smells a bit like old people.");
     }
 }
 

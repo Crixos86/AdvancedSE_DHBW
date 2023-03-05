@@ -1,9 +1,11 @@
 package de.dhbw.ase.simpsons.domain.charakters;
 
-public class Skinner extends Character implements CharacterAction{
+import de.dhbw.ase.simpsons.application.CharacterAction;
+
+public class Skinner extends Character implements CharacterAction {
     private final String name = "Skinner";
-    private final int age = 54;
-    private final String job = "School Principal";
+    private int age = 54;
+    private String job = "School Principal";
 
     public Skinner() {
         super("Skinner", 54, "School Principal");
@@ -19,5 +21,10 @@ public class Skinner extends Character implements CharacterAction{
     @Override
     public void introduce() {
         System.out.printf("Hi, my name is %s and I am %d years old. I am a %s.", name, age, job);
+    }
+
+    @Override
+    public void giveQuote() {
+        System.out.println("Science has it all.");
     }
 }

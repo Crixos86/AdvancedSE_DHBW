@@ -1,33 +1,26 @@
 package de.dhbw.ase.simpsons.domain.homes;
 
-public class ApusHome {
+import de.dhbw.ase.simpsons.application.HomeFeatures;
+
+public class ApusHome extends Home implements HomeFeatures {
     private final String address = "Unknown";
     private final int numberOfRooms = 4;
     private final int numberOfBathrooms = 2;
     private final int squareFootage = 1500;
 
-    public String getAddress() {
-        return address;
+    public ApusHome() {
+        super("Unknown", 4, 2, 1500);
     }
 
-    public int getNumberOfRooms() {
-        return numberOfRooms;
-    }
 
-    public int getNumberOfBathrooms() {
-        return numberOfBathrooms;
-    }
-
-    public int getSquareFootage() {
-        return squareFootage;
-    }
-
+    @Override
     public void listFeatures() {
-        System.out.println("Apu's home has " + numberOfRooms + " rooms, " + numberOfBathrooms + " bathrooms and is " + squareFootage + " square feet in size.");
+        System.out.printf("Apu's home has %d rooms, %d bathrooms and is %d square feet in size.%n", numberOfRooms, numberOfBathrooms, squareFootage);
     }
 
-    public void takeATour() {
-        System.out.println("Come and see the luxurious home of Springfield's favorite Kwik-E-Mart owner, Apu.");
+    @Override
+    public void takeTour() {
+        System.out.println("Welcome to my humble home.");
     }
 }
 

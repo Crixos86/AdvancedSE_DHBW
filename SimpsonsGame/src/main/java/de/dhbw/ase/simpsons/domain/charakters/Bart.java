@@ -1,7 +1,9 @@
 package de.dhbw.ase.simpsons.domain.charakters;
 
-public class Bart extends Character implements CharacterAction{
-    private String name = "Bart";
+import de.dhbw.ase.simpsons.application.CharacterAction;
+
+public class Bart extends Character implements CharacterAction {
+    private final String name = "Bart";
     private int age = 10;
     private String job = "Student";
 
@@ -21,4 +23,52 @@ public class Bart extends Character implements CharacterAction{
     public void introduce() {
         System.out.printf("Hi, my name is %s and I am %d years old. I am a %s.", name, age, job);
     }
+
+    @Override
+    public void giveQuote() {
+        System.out.println("I didn't do it, nobody saw me do it, there's no way you can prove anything!");
+    }
+
+    String[] BartPicture = {
+            "              .#+: .*#  .=.",
+            "              =*-#**-#=+*=% .++",
+            "              %---=--=*=--%**-++=*#:  .",
+            "             =*-----------=----#=-=#=**#",
+            "             %---------------------+=--#+**#.",
+            "            =*-------------------------+=--*+++*",
+            "            %------------------------------=+--#.",
+            "           ++----------------------------------#+**%",
+            "          .%-------------------------------------+*.",
+            "          #+------------------------------------+*",
+            "         =#------------------------------------+*",
+            "        **------------------------------------=#",
+            "       #====---------------------------------=#",
+            "     =++=---+**=-----------------------------%.",
+            "   -*:        .+*+*+=====+*+----------------#:",
+            "  :*           :#-         :*+-------------#-",
+            "  +-    #     -*.            +*-----------++",
+            "  -%%:        %.              %=---------=#",
+            "   *%+===-:. .@*+    #        #+---------%.",
+            "  =*-----=+**+@@#.           .%---------#-",
+            "  *+-----------#-           :#=--------+*",
+            "   %*=----------+*=.     .-**----------%",
+            "  =*-+***---------=+*+++++=-----------#:",
+            " :%-------------------------------***##",
+            " #=--------------------------------=+++*",
+            "++--------------------------------*+*#-%",
+            "+*------------------------------=*=-==*+",
+            " .=**=---------------------------=*%+-.",
+            "    .-=+*+=--------------*+-------=#",
+            "         .:=+#***********+**------*=",
+            "            -*+=-----------------#:",
+            "               *=----------------#:",
+            "               *#----------------%*:"
+};
+
+    public void printBart() {
+        for (String line : BartPicture) {
+            System.out.println(line);
+        }
+    }
+
 }

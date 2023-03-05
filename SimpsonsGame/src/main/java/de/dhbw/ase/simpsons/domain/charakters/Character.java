@@ -5,6 +5,8 @@ public class Character {
     private int age;
     private String job;
 
+    private String Quote;
+
     public Character(String name, int age, String job) {
         this.name = name;
         this.age = age;
@@ -33,6 +35,15 @@ public class Character {
 
     public void setJob(String job) {
         this.job = job;
+    }
+
+
+    public String getQuote() {
+        return Quote;
+    }
+
+    public void setQuote(String quote) {
+        Quote = quote;
     }
 
 }

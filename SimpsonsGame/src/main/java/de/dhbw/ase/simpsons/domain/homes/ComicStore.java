@@ -1,6 +1,8 @@
 package de.dhbw.ase.simpsons.domain.homes;
 
-public class ComicStore {
+import de.dhbw.ase.simpsons.application.HomeFeatures;
+
+public class ComicStore implements HomeFeatures {
     private final String name = "The Android's Dungeon & Baseball Card Shop";
     private int numberOfComics = 10000;
     private final int numberOfCollectibles = 5000;
@@ -17,17 +19,15 @@ public class ComicStore {
         return numberOfCollectibles;
     }
 
-    public void listInventory() {
+
+    @Override
+    public void listFeatures() {
         System.out.println(name + " has " + numberOfComics + " comics and " + numberOfCollectibles + " collectibles in stock.");
     }
 
-    public void sellComic(int number) {
-        if (numberOfComics >= number) {
-            numberOfComics -= number;
-            System.out.println(number + " comics have been sold.");
-        } else {
-            System.out.println("Not enough comics in stock to fulfill the request.");
-        }
+    @Override
+    public void takeTour() {
+        System.out.println("Welcome to " + name + ". We have a wide variety of comics and collectibles.");
     }
 }
 
