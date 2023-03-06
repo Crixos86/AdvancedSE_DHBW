@@ -2,7 +2,7 @@ package de.dhbw.ase.simpsons.domain.charakters;
 
 import de.dhbw.ase.simpsons.application.CharacterAction;
 
-public class Ned extends Character implements CharacterAction {
+public class Ned extends SimpsonsCharacter implements CharacterAction {
     private  final String name = "Ned";
     private  int age = 42;
     private  String job = "Homer's Neighbor and Prayer";

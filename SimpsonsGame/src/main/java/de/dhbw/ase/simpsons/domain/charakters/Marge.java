@@ -2,7 +2,7 @@ package de.dhbw.ase.simpsons.domain.charakters;
 
 import de.dhbw.ase.simpsons.application.CharacterAction;
 
-public class Marge extends Character implements CharacterAction {
+public class Marge extends SimpsonsCharacter implements CharacterAction {
     private final String name = "Marge";
     private int age = 34;
     private String job = "Artist and Housewife";

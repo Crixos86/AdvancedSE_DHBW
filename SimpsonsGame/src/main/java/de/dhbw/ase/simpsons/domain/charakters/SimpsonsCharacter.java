@@ -1,13 +1,13 @@
 package de.dhbw.ase.simpsons.domain.charakters;
 
-public class Character {
+public class SimpsonsCharacter {
     private String name;
     private int age;
     private String job;
 
     private String Quote;
 
-    public Character(String name, int age, String job) {
+    public SimpsonsCharacter(String name, int age, String job) {
         this.name = name;
         this.age = age;
         this.job = job;

@@ -2,6 +2,7 @@ package de.dhbw.ase.simpsons.plugin;
 
 import de.dhbw.ase.simpsons.adapters.GameTerminal;
 import de.dhbw.ase.simpsons.adapters.UserBuild;
+import de.dhbw.ase.simpsons.application.QuestionManager;
 import de.dhbw.ase.simpsons.domain.charakters.Apu;
 import de.dhbw.ase.simpsons.domain.charakters.ComicBookGuy;
 
@@ -10,6 +11,9 @@ public class SimpsonsTerminal {
         GameTerminal terminal = new GameTerminal();
         terminal.printBanner();
         terminal.greeting();
+
+        QuestionManager questionManager = new QuestionManager();
+        questionManager.askQuestions();
 
     }
 }
