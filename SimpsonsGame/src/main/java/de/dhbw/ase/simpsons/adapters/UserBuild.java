@@ -1,4 +1,5 @@
 package de.dhbw.ase.simpsons.adapters;
+import de.dhbw.ase.simpsons.application.QuestionManager;
 import de.dhbw.ase.simpsons.domain.charakters.Bart;
 import de.dhbw.ase.simpsons.domain.charakters.Homer;
 import de.dhbw.ase.simpsons.domain.charakters.Lisa;
@@ -6,24 +7,30 @@ import de.dhbw.ase.simpsons.domain.charakters.Marge;
 
 
 import java.util.Map;
-import java.util.function.Supplier;
 
-public class UserBuild {
 
-    private static final Map<Character, Supplier<Character>> characterMap = Map.of(
-//            'H', Homer::new,
-//            'M', Marge::new,
-//            'B', Bart::new,
-//            'L', Lisa::new
+public class UserBuild  {
 
+    private static final Map<Character, Runnable> actions = Map.of(
+            'H', () -> new Homer().giveQuote(),
+            'M', () -> new Marge().giveQuote(),
+            'L', () -> new Lisa().giveQuote()
     );
 
-    public static Character createCharacter(char c) {
-        Supplier<Character> supplier = characterMap.get(c);
-        if (supplier == null) {
-            throw new IllegalArgumentException("Ungültiger Charakter-Code: " + c);
+    public static void performActionBasedOnAnswers() {
+        Character mostCommonChar = new QuestionManager().askQuestions();
+
+        if (mostCommonChar == null) {
+            // keine Antwort
+            return;
         }
-        return supplier.get();
+
+        Runnable action = actions.get(mostCommonChar);
+        if (action != null) {
+            action.run();
+        } else {
+            // ungültiger Charakter-Code
+        }
     }
 
 }

@@ -20,7 +20,4 @@ public class GameTerminal {
         System.out.println("\nWelcome to the Simpsons Game!\nLet me ask you some questions to verify which Simpsons Character you are alike.\n");
     }
 
-    public void askQuestion(String question) {
-        System.out.println(question);
-    }
 }

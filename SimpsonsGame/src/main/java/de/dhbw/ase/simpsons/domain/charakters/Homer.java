@@ -3,6 +3,7 @@ package de.dhbw.ase.simpsons.domain.charakters;
 import de.dhbw.ase.simpsons.application.CharacterAction;
 
 public class Homer extends SimpsonsCharacter implements CharacterAction {
+
     private final String name = "Homer";
     private int age = 36;
     private String job = "Safety Inspector";

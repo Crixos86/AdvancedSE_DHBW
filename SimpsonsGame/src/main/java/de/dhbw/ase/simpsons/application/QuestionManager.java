@@ -7,10 +7,14 @@ import java.util.*;
 
 public class QuestionManager implements Question {
 
+    private Scanner scanner;
+
+
     private Map<String, Character> questionToChar = new HashMap<>();
     private Map<Character, String> charToName = new HashMap<>();
 
     public QuestionManager() {
+        scanner = new Scanner(System.in);
         questionToChar.put("Magst du Donuts?", 'H');
         questionToChar.put("Magst du Kunst?", 'M');
         questionToChar.put("Gehst du gerne zur Schule?", 'L');
@@ -25,7 +29,6 @@ public class QuestionManager implements Question {
 
     @Override
     public Character askQuestions() {
-        Scanner scanner = new Scanner(System.in);
         List<Character> answers = new ArrayList<>();
 
         for (String question : questionToChar.keySet()) {
@@ -71,5 +74,6 @@ public class QuestionManager implements Question {
         return mostCommonChar;
 
     }
+
 
 }
