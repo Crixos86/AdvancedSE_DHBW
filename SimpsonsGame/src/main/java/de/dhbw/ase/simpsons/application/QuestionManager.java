@@ -15,15 +15,38 @@ public class QuestionManager implements Question {
 
     public QuestionManager() {
         scanner = new Scanner(System.in);
-        questionToChar.put("Magst du Donuts?", 'H');
-        questionToChar.put("Magst du Kunst?", 'M');
-        questionToChar.put("Gehst du gerne zur Schule?", 'L');
-        questionToChar.put("Schreibst du gute Noten?", 'L');
-        questionToChar.put("Magst du das Meer?", 'M');
+        questionToChar.put("Donuts are your favourite food?", 'H');
+        questionToChar.put("Is beer your life?", 'H');
+        questionToChar.put("Do you like art?", 'M');
+        questionToChar.put("Is the ocean very inspiring for you?", 'M');
+        questionToChar.put("Do you like going to school?", 'L');
+        questionToChar.put("Is it your dream to attend a Ivy League University?", 'L');
+        questionToChar.put("Do you often suffer from brain freeze due to too much Squishy?", 'B');
+        questionToChar.put("Do you like to ride your Skateboard?", 'B');
+        questionToChar.put("You love to work 24 hours in your own supermarket?", 'A');
+        questionToChar.put("Sorting groceries is a dream of yours?", 'A');
+        questionToChar.put("Helping your lovely neighbours is part of your daily routine?", 'N');
+        questionToChar.put("Attending church is very important to you?", 'N');
+        questionToChar.put("Comics are your life?", 'C');
+        questionToChar.put("Eating Fast Food is the best?", 'C');
+        questionToChar.put("Do you solve your conflicts with violence?", 'X');
+        questionToChar.put("Do you like to laugh at people?", 'X');
+        questionToChar.put("Do you like to sleep?", 'Y');
+        questionToChar.put("Playing with toys is awesome?", 'Y');
+        questionToChar.put("Do you like to teach annoying pupils a lesson?", 'S');
+        questionToChar.put("Do you still live with your parents?", 'S');
 
         charToName.put('H', "Homer Simpson");
         charToName.put('M', "Marge Simpson");
         charToName.put('L', "Lisa Simpson");
+        charToName.put('B', "Bart Simpson");
+        charToName.put('A', "Apu Nahasapeemapetilon");
+        charToName.put('N', "Ned Flanders");
+        charToName.put('C', "Comic Book Guy");
+        charToName.put('X', "Nelson");
+        charToName.put('Y', "Maggie");
+        charToName.put('S', "Seymour Skinner");
+
 
     }
 
@@ -37,19 +60,19 @@ public class QuestionManager implements Question {
             String answer;
             while (true) {
                 answer = scanner.nextLine().toLowerCase();
-                if (answer.equals("ja") || answer.equals("nein")) {
+                if (answer.equals("yes") || answer.equals("no")) {
                     break;
                 }
-                System.out.println("Bitte antworte mit Ja oder Nein.");
+                System.out.println("Please answer the question with yes or no.");
             }
 
-            if (answer.equals("ja")) {
+            if (answer.equals("yes")) {
                 answers.add(questionToChar.get(question));
             }
         }
 
         if (answers.isEmpty()) {
-            System.out.println("Du hast keine Fragen beantwortet.");
+            System.out.println("You didn't answer any question.");
             return null;
         } else {
             return getMostCommonCharacter(answers);
