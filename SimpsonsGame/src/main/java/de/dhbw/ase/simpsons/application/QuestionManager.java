@@ -4,6 +4,7 @@ package de.dhbw.ase.simpsons.application;
 import de.dhbw.ase.simpsons.adapters.Question;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class QuestionManager implements Question {
 
@@ -11,7 +12,7 @@ public class QuestionManager implements Question {
 
 
     private Map<String, Character> questionToChar = new HashMap<>();
-    private Map<Character, String> charToName = new HashMap<>();
+    public static Map<Character, String> charToName = new HashMap<>();
 
     public QuestionManager() {
         scanner = new Scanner(System.in);
@@ -60,13 +61,13 @@ public class QuestionManager implements Question {
             String answer;
             while (true) {
                 answer = scanner.nextLine().toLowerCase();
-                if (answer.equals("yes") || answer.equals("no")) {
+                if (answer.equals("y") || answer.equals("n")) {
                     break;
                 }
-                System.out.println("Please answer the question with yes or no.");
+                System.out.println("Please answer the question with [y] yes OR [n] no.");
             }
 
-            if (answer.equals("yes")) {
+            if (answer.equals("y")) {
                 answers.add(questionToChar.get(question));
             }
         }

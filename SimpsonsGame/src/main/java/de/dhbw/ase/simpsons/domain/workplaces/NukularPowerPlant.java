@@ -21,7 +21,7 @@ public  class NukularPowerPlant extends Workplaces implements WorkplaceFeatures 
 
     @Override
     public void takeATour() {
-        System.out.println("Take a tour of the Springfield Nuclear Power Plant and meet Mr. Burns and his employees.");
+        System.out.println("Take a tour of the Springfield Nuclear Power Plant and meet Mr. Burns and his employees. Days since the last accident: 0");
     }
 }
 

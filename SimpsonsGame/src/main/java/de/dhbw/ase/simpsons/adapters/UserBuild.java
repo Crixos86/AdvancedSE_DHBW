@@ -6,26 +6,27 @@ import de.dhbw.ase.simpsons.domain.charakters.*;
 import java.util.Map;
 
 
-public class UserBuild  {
+public class UserBuild  extends QuestionManager{
 
     private static final Map<Character, Runnable> actions = Map.of(
-            'H', () -> new Homer().giveQuote(),
-            'M', () -> new Marge().giveQuote(),
-            'L', () -> new Lisa().giveQuote(),
-            'B', () -> new Bart().giveQuote(),
-            'A', () -> new Apu().giveQuote(),
-            'N', () -> new Ned().giveQuote(),
-            'C', () -> new ComicBookGuy().giveQuote(),
-            'X', () -> new Nelson().giveQuote(),
-            'Y', () -> new Maggie().giveQuote(),
-            'S', () -> new Skinner().giveQuote()
+            'H', () -> new Homer().introduce(),
+            'M', () -> new Marge().introduce(),
+            'L', () -> new Lisa().introduce(),
+            'B', () -> new Bart().introduce(),
+            'A', () -> new Apu().introduce(),
+            'N', () -> new Ned().introduce(),
+            'C', () -> new ComicBookGuy().introduce(),
+            'X', () -> new Nelson().introduce(),
+            'Y', () -> new Maggie().introduce(),
+            'S', () -> new Skinner().introduce()
     );
 
     public static void performActionBasedOnAnswers() {
         Character mostCommonChar = new QuestionManager().askQuestions();
-
+        String ChosenCharacter = charToName.get(mostCommonChar);
+        System.out.printf("The Simpsons character you are most like is %s \n", ChosenCharacter );
         if (mostCommonChar == null) {
-            // keine Antwort
+            // no Answer
             return;
         }
 
@@ -33,8 +34,9 @@ public class UserBuild  {
         if (action != null) {
             action.run();
         } else {
-            // ungültiger Charakter-Code
+            // invalid nametag
         }
+
     }
 
 }

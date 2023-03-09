@@ -1,6 +1,8 @@
 package de.dhbw.ase.simpsons.domain.charakters;
 
 import de.dhbw.ase.simpsons.application.CharacterAction;
+import de.dhbw.ase.simpsons.domain.homes.ApusHome;
+import de.dhbw.ase.simpsons.domain.workplaces.KwikEMart;
 
 public class Apu extends SimpsonsCharacter implements CharacterAction {
     private final String name = "Apu";
@@ -22,6 +24,22 @@ public class Apu extends SimpsonsCharacter implements CharacterAction {
     @Override
     public void introduce() {
         System.out.printf("Hi, my name is %s and I am %d years old. I am a %s.", name, age, job);
+        presentHomeAndWorkplace();
+        giveQuote();
+
+
+    }
+
+    @Override
+    public void presentHomeAndWorkplace() {
+        System.out.println("I live in a beatiful home at: \n");
+        ApusHome apusHome = new ApusHome();
+        apusHome.listFeatures();
+        apusHome.takeTour();
+        System.out.println("I like to work at: \n");
+        KwikEMart kwikEMart = new KwikEMart();
+        kwikEMart.listInformation();
+        kwikEMart.takeATour();
     }
 
     @Override
