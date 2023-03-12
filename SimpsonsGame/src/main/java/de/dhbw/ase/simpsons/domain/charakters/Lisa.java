@@ -77,6 +77,11 @@ public class Lisa extends SimpsonsCharacter implements CharacterAction {
         };
         for (String line : Picture) {
             System.out.println(line);
+            try {
+                Thread.sleep(500); // Pause von einer Sekunde zwischen jeder Zeile
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -94,6 +99,6 @@ public class Lisa extends SimpsonsCharacter implements CharacterAction {
 
     @Override
     public void giveQuote() {
-        System.out.println("My interests include music, science, justice, animals, shapes, feelings...");
+        System.out.println("Famous Quote: \"My interests include music, science, justice, animals, shapes, feelings...\"");
     }
 }

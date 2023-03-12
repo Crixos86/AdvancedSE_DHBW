@@ -103,6 +103,11 @@ public class Homer extends SimpsonsCharacter implements CharacterAction {
         };
         for (String line : Picture) {
             System.out.println(line);
+            try {
+                Thread.sleep(500); // Pause von einer Sekunde zwischen jeder Zeile
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
     }
@@ -122,6 +127,6 @@ public class Homer extends SimpsonsCharacter implements CharacterAction {
 
     @Override
     public void giveQuote() {
-        System.out.println("D'oh!");
+        System.out.println("Famous Quote: \"D'oh!\"");
     }
 }

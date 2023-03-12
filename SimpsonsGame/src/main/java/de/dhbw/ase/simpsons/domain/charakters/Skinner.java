@@ -71,6 +71,11 @@ public class Skinner extends SimpsonsCharacter implements CharacterAction {
         };
         for (String line : Picture) {
             System.out.println(line);
+            try {
+                Thread.sleep(500); // Pause von einer Sekunde zwischen jeder Zeile
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -89,6 +94,6 @@ public class Skinner extends SimpsonsCharacter implements CharacterAction {
 
     @Override
     public void giveQuote() {
-        System.out.println("Science has it all.");
+        System.out.println("Famous Quote: \"Science has it all.\"");
     }
 }

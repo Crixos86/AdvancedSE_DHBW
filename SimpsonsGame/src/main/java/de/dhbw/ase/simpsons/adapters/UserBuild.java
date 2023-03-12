@@ -24,7 +24,7 @@ public class UserBuild  extends QuestionManager{
     public static void performActionBasedOnAnswers() {
         Character mostCommonChar = new QuestionManager().askQuestions();
         String ChosenCharacter = charToName.get(mostCommonChar);
-        System.out.printf("The Simpsons character you are most like is %s \n", ChosenCharacter );
+        System.out.printf("The Simpsons character you are most like is %s %n", ChosenCharacter );
         if (mostCommonChar == null) {
             // no Answer
             return;

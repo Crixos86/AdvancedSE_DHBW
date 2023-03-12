@@ -86,18 +86,27 @@ public class QuestionManager implements Question {
         for (Character nametag : characters) {
             charCounts.put(nametag, charCounts.getOrDefault(nametag, 0) + 1);
         }
-        char mostCommonChar = ' ';
+
+        List<Character> mostCommonChars = new ArrayList<>();
         int mostCommonCharCount = 0;
         for (Character nametag : charCounts.keySet()) {
             int count = charCounts.get(nametag);
             if (count > mostCommonCharCount) {
-                mostCommonChar = nametag;
+                mostCommonChars.clear();
+                mostCommonChars.add(nametag);
                 mostCommonCharCount = count;
+            } else if (count == mostCommonCharCount) {
+                mostCommonChars.add(nametag);
             }
         }
-        return mostCommonChar;
 
+        if (mostCommonChars.size() == 1) {
+            return mostCommonChars.get(0);
+        } else {
+            return mostCommonChars.get(new Random().nextInt(mostCommonChars.size()));
+        }
     }
+
 
 
 }

@@ -45,7 +45,7 @@ public class Bart extends SimpsonsCharacter implements CharacterAction {
 
     @Override
     public void giveQuote() {
-        System.out.println("I didn't do it, nobody saw me do it, there's no way you can prove anything!");
+        System.out.println("Famous Quote: \"I didn't do it, nobody saw me do it, there's no way you can prove anything!\"");
     }
 
     @Override
@@ -88,6 +88,11 @@ public class Bart extends SimpsonsCharacter implements CharacterAction {
         };
         for (String line : Picture) {
             System.out.println(line);
+            try {
+                Thread.sleep(500); // pause for 1 second while printing the picture
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 

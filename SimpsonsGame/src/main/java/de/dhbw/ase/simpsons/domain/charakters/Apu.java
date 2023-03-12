@@ -54,6 +54,11 @@ public class Apu extends SimpsonsCharacter implements CharacterAction {
     };
         for (String line : Picture) {
             System.out.println(line);
+            try {
+                Thread.sleep(500); // Pause von einer Sekunde zwischen jeder Zeile
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -71,7 +76,7 @@ public class Apu extends SimpsonsCharacter implements CharacterAction {
 
     @Override
     public void giveQuote() {
-        System.out.println("Never have I seen you look so unhappy while purchasing such a large quantity of ice cream!");
+        System.out.println("Famous Quote: \"Never have I seen you look so unhappy while purchasing such a large quantity of ice cream!\"");
     }
 
 

@@ -76,6 +76,11 @@ public class ComicBookGuy extends SimpsonsCharacter implements CharacterAction {
         };
         for (String line : Picture) {
             System.out.println(line);
+            try {
+                Thread.sleep(500); // Pause von einer Sekunde zwischen jeder Zeile
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -89,6 +94,6 @@ public class ComicBookGuy extends SimpsonsCharacter implements CharacterAction {
 
     @Override
     public void giveQuote() {
-        System.out.println("I'm not a nerd, I'm a collector of rare and valuable things.");
+        System.out.println("Famous Quote: \"I'm not a nerd, I'm a collector of rare and valuable things.\"");
     }
 }

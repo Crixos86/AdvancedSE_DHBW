@@ -6,9 +6,7 @@ import de.dhbw.ase.simpsons.adapters.UserBuild;
 
 public class SimpsonsTerminal {
     public static void main(String[] args) {
-        GameTerminal terminal = new GameTerminal();
-        terminal.printBanner();
-        terminal.greeting();
+        GameTerminal.printBanner();
         UserBuild.performActionBasedOnAnswers();
 
 
