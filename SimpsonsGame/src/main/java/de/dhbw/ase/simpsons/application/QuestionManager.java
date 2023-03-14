@@ -12,7 +12,7 @@ public class QuestionManager implements Question {
 
 
     private Map<String, Character> questionToChar = new HashMap<>();
-    public static Map<Character, String> charToName = new HashMap<>();
+    public final static Map<Character, String> charToName = new HashMap<>();
 
     public QuestionManager() {
         scanner = new Scanner(System.in);
