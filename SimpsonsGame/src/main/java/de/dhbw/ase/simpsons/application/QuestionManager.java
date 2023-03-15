@@ -11,7 +11,7 @@ public class QuestionManager implements Question {
     private Scanner scanner;
 
 
-    private Map<String, Character> questionToChar = new HashMap<>();
+    public final static Map<String, Character> questionToChar = new HashMap<>();
     public final static Map<Character, String> charToName = new HashMap<>();
 
     public QuestionManager() {
