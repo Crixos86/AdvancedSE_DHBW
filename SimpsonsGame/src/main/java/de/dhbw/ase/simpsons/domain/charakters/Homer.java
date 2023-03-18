@@ -7,20 +7,12 @@ import de.dhbw.ase.simpsons.domain.workplaces.SpringfieldSchool;
 
 public class Homer extends SimpsonsCharacter implements CharacterAction {
 
-    private final String name = "Homer";
-    private int age = 36;
-    private String job = "Safety Inspector";
-
     public Homer() {
         super("Homer", 36, "Safety Inspector");
     }
 
-    public void eatDonut() {
-        System.out.println(name + " is eating a donut.");
-    }
-
-    public void drinkDuff() {
-        System.out.println(name + " is drinking Duff beer.");
+    public void correctWorkplace() {
+        System.out.println(name + " says: It is pronounced 'Nukular'!");
     }
 
     @Override
@@ -122,6 +114,7 @@ public class Homer extends SimpsonsCharacter implements CharacterAction {
         NukularPowerPlant nukularPowerPlant = new NukularPowerPlant();
         nukularPowerPlant.listInformation();
         nukularPowerPlant.takeATour();
+        correctWorkplace();
 
     }
 

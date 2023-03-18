@@ -4,10 +4,6 @@ import de.dhbw.ase.simpsons.application.CharacterAction;
 import de.dhbw.ase.simpsons.domain.homes.ComicStore;
 
 public class ComicBookGuy extends SimpsonsCharacter implements CharacterAction {
-    private final String name = "Comic Book Guy";
-    private int age = 45;
-    private String job = "Comic Book Store Owner";
-
     public ComicBookGuy() {
         super("Comic Book Guy", 45, "Comic Book Store Owner"  );
     }
@@ -86,10 +82,11 @@ public class ComicBookGuy extends SimpsonsCharacter implements CharacterAction {
 
     @Override
     public void presentHomeAndWorkplace() {
-        System.out.println("I live and alsow work in a beatiful home at: \n");
+        workAtComicBookStore();
         ComicStore comicStore = new ComicStore();
         comicStore.listFeatures();
         comicStore.takeTour();
+        makeSnarkyComments();
     }
 
     @Override

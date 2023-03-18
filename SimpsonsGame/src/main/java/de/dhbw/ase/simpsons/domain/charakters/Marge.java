@@ -5,9 +5,6 @@ import de.dhbw.ase.simpsons.domain.homes.EvergreenTerrace;
 import de.dhbw.ase.simpsons.domain.workplaces.SpringfieldSchool;
 
 public class Marge extends SimpsonsCharacter implements CharacterAction {
-    private final String name = "Marge";
-    private int age = 34;
-    private String job = "Artist and Housewife";
 
     public Marge() {
         super("Marge", 34, "Housewife");
@@ -26,7 +23,9 @@ public class Marge extends SimpsonsCharacter implements CharacterAction {
         System.out.printf("Hi, my name is %s and I am %d years old. I am a %s.", name, age, job);
         printPicture();
         presentHomeAndWorkplace();
+        careForChildren();
         giveQuote();
+        bakeCake();
     }
 
     @Override

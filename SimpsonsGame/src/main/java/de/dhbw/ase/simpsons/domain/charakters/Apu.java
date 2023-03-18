@@ -5,21 +5,16 @@ import de.dhbw.ase.simpsons.domain.homes.ApusHome;
 import de.dhbw.ase.simpsons.domain.workplaces.KwikEMart;
 
 public class Apu extends SimpsonsCharacter implements CharacterAction {
-    private final String name = "Apu";
-    private int age = 36;
-    private final String job = "Convenience Store Owner";
 
     public Apu() {
-        super("Apu", 36, "Convenience Store Owner");
+        super("Apu", 40, "Kwik-E-Mart Owner");
     }
 
     public void workAtKwikEMart() {
         System.out.println(name + " is working at the Kwik-E-Mart.");
     }
 
-    public void tellJokes() {
-        System.out.println(name + " is telling jokes.");
-    }
+
 
     @Override
     public void introduce() {
@@ -64,11 +59,11 @@ public class Apu extends SimpsonsCharacter implements CharacterAction {
 
     @Override
     public void presentHomeAndWorkplace() {
-        System.out.println("I live in a beatiful home at: \n");
+        System.out.println("I live in a beautiful home at: \n");
         ApusHome apusHome = new ApusHome();
         apusHome.listFeatures();
         apusHome.takeTour();
-        System.out.println("I like to work at: \n");
+        workAtKwikEMart();
         KwikEMart kwikEMart = new KwikEMart();
         kwikEMart.listInformation();
         kwikEMart.takeATour();

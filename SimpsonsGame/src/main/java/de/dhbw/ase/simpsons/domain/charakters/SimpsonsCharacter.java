@@ -1,12 +1,18 @@
 package de.dhbw.ase.simpsons.domain.charakters;
 
 public class SimpsonsCharacter {
-    private String name;
-    private int age;
-    private String job;
 
-    private String Quote;
+    protected String name;
 
+    protected int age;
+
+    protected String job;
+
+    protected String Quote;
+
+    public SimpsonsCharacter() {
+
+    }
     public SimpsonsCharacter(String name, int age, String job) {
         this.name = name;
         this.age = age;

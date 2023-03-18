@@ -6,9 +6,6 @@ import de.dhbw.ase.simpsons.domain.homes.NelsonsTrailer;
 import de.dhbw.ase.simpsons.domain.workplaces.SpringfieldSchool;
 
 public class Nelson extends SimpsonsCharacter implements CharacterAction {
-    private final String name = "Nelson";
-    private int age = 11;
-    private String job = "School Bully";
 
     public Nelson() {
         super("Nelson", 11, "School Bully");
@@ -26,6 +23,8 @@ public class Nelson extends SimpsonsCharacter implements CharacterAction {
         System.out.printf("Hi, my name is %s and I am %d years old. I am a %s.", name, age, job);
         printPicture();
         presentHomeAndWorkplace();
+        bullyStudents();
+        laugh();
         giveQuote();
     }
 

@@ -4,9 +4,6 @@ import de.dhbw.ase.simpsons.application.CharacterAction;
 import de.dhbw.ase.simpsons.domain.homes.EvergreenTerrace;
 
 public class Maggie extends SimpsonsCharacter implements CharacterAction {
-    private final String name = "Maggie";
-    private int age = 1;
-    private String job = "Infant";
 
     public Maggie() {
         super("Maggie", 1, "Infant");
@@ -24,7 +21,9 @@ public class Maggie extends SimpsonsCharacter implements CharacterAction {
         System.out.printf("Hi, my name is %s and I am %d years old. I am a %s.", name, age, job);
         printPicture();
         presentHomeAndWorkplace();
+        suckThumb();
         giveQuote();
+        playWithRattle();
     }
 
     @Override

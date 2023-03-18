@@ -7,9 +7,6 @@ import de.dhbw.ase.simpsons.domain.workplaces.Leftorium;
 import de.dhbw.ase.simpsons.domain.workplaces.SpringfieldSchool;
 
 public class Ned extends SimpsonsCharacter implements CharacterAction {
-    private  final String name = "Ned";
-    private  int age = 42;
-    private  String job = "Homer's Neighbor and Prayer";
 
     public Ned() {
         super("Ned", 42, "Homer's Neighbor and Prayer");
@@ -27,8 +24,11 @@ public class Ned extends SimpsonsCharacter implements CharacterAction {
     public void introduce() {
         System.out.printf("Hi, my name is %s and I am %d years old. I am a %s.", name, age, job);
         printPicture();
+        praying();
         presentHomeAndWorkplace();
+        beFriendly();
         giveQuote();
+
     }
 
     @Override

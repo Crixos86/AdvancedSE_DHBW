@@ -1,7 +1,7 @@
 package de.dhbw.ase.simpsons.domain.characters;
 import de.dhbw.ase.simpsons.domain.charakters.Apu;
 import org.junit.Test;
-import org.junit.Test;
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import static org.junit.Assert.assertEquals;

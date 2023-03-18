@@ -6,10 +6,6 @@ import de.dhbw.ase.simpsons.domain.homes.SkinnersHome;
 import de.dhbw.ase.simpsons.domain.workplaces.SpringfieldSchool;
 
 public class Skinner extends SimpsonsCharacter implements CharacterAction {
-    private final String name = "Skinner";
-    private int age = 54;
-    private String job = "School Principal";
-
     public Skinner() {
         super("Skinner", 54, "School Principal");
     }
@@ -26,6 +22,7 @@ public class Skinner extends SimpsonsCharacter implements CharacterAction {
         System.out.printf("Hi, my name is %s and I am %d years old. I am a %s.", name, age, job);
         printPicture();
         presentHomeAndWorkplace();
+        disciplineStudents();
         giveQuote();
     }
 
@@ -85,7 +82,7 @@ public class Skinner extends SimpsonsCharacter implements CharacterAction {
         SkinnersHome skinnersHome = new SkinnersHome();
         skinnersHome.listFeatures();
         skinnersHome.takeTour();
-        System.out.println("I like to teach pupils at: \n");
+        workAsPrincipal();
         SpringfieldSchool springfieldSchool = new SpringfieldSchool();
         springfieldSchool.listInformation();
         springfieldSchool.takeATour();
