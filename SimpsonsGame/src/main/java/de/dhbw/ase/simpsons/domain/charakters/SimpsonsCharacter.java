@@ -1,5 +1,7 @@
 package de.dhbw.ase.simpsons.domain.charakters;
 
+import de.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
+
 public class SimpsonsCharacter {
 
     protected String name;
@@ -50,6 +52,10 @@ public class SimpsonsCharacter {
 
     public void setQuote(String quote) {
         Quote = quote;
+    }
+
+    public void favoriteFood(ConsumerGood food) {
+        System.out.println(name + "s' favourite food is: " + food );
     }
 
 }

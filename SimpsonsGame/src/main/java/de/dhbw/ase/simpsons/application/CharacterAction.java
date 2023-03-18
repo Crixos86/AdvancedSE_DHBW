@@ -7,4 +7,5 @@ public interface CharacterAction {
 
     void presentHomeAndWorkplace();
     void giveQuote();
+
 }

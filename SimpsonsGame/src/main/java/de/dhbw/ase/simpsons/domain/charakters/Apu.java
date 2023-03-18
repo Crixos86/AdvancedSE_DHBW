@@ -1,6 +1,7 @@
 package de.dhbw.ase.simpsons.domain.charakters;
 
 import de.dhbw.ase.simpsons.application.CharacterAction;
+import de.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
 import de.dhbw.ase.simpsons.domain.homes.ApusHome;
 import de.dhbw.ase.simpsons.domain.workplaces.KwikEMart;
 
@@ -22,7 +23,7 @@ public class Apu extends SimpsonsCharacter implements CharacterAction {
         printPicture();
         presentHomeAndWorkplace();
         giveQuote();
-
+        apuFood();
 
     }
 
@@ -72,6 +73,12 @@ public class Apu extends SimpsonsCharacter implements CharacterAction {
     @Override
     public void giveQuote() {
         System.out.println("Famous Quote: \"Never have I seen you look so unhappy while purchasing such a large quantity of ice cream!\"");
+    }
+
+    public void apuFood() {
+        ConsumerGood apuFood = ConsumerGood.WORK;
+        favoriteFood(apuFood);
+
     }
 
 
