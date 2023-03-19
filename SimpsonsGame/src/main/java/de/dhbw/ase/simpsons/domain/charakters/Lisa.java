@@ -3,6 +3,7 @@ package de.dhbw.ase.simpsons.domain.charakters;
 import de.dhbw.ase.simpsons.application.CharacterAction;
 import de.dhbw.ase.simpsons.domain.homes.EvergreenTerrace;
 import de.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
+import de.dhbw.ase.simpsons.domain.transport.PersonalTransport;
 import de.dhbw.ase.simpsons.domain.workplaces.SpringfieldSchool;
 
 public class Lisa extends SimpsonsCharacter implements CharacterAction {
@@ -24,6 +25,7 @@ public class Lisa extends SimpsonsCharacter implements CharacterAction {
         playSaxophone();
         giveQuote();
         lisaFood();
+        lisaTransport();
     }
 
     @Override
@@ -103,5 +105,10 @@ public class Lisa extends SimpsonsCharacter implements CharacterAction {
         ConsumerGood lisaFood = ConsumerGood.TOFU;
         favoriteFood(lisaFood);
 
+    }
+
+    public void lisaTransport() {
+        PersonalTransport lisaTransport = PersonalTransport.LISABIKE;
+        personalTransport(lisaTransport);
     }
 }

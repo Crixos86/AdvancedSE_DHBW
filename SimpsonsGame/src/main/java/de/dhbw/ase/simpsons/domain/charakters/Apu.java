@@ -3,6 +3,7 @@ package de.dhbw.ase.simpsons.domain.charakters;
 import de.dhbw.ase.simpsons.application.CharacterAction;
 import de.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
 import de.dhbw.ase.simpsons.domain.homes.ApusHome;
+import de.dhbw.ase.simpsons.domain.transport.PersonalTransport;
 import de.dhbw.ase.simpsons.domain.workplaces.KwikEMart;
 
 public class Apu extends SimpsonsCharacter implements CharacterAction {
@@ -24,6 +25,7 @@ public class Apu extends SimpsonsCharacter implements CharacterAction {
         presentHomeAndWorkplace();
         giveQuote();
         apuFood();
+        apuTransport();
 
     }
 
@@ -79,6 +81,11 @@ public class Apu extends SimpsonsCharacter implements CharacterAction {
         ConsumerGood apuFood = ConsumerGood.WORK;
         favoriteFood(apuFood);
 
+    }
+
+    public void apuTransport() {
+        PersonalTransport apuTransport = PersonalTransport.APUCAR;
+        personalTransport(apuTransport);
     }
 
 

@@ -3,6 +3,7 @@ package de.dhbw.ase.simpsons.domain.charakters;
 import de.dhbw.ase.simpsons.application.CharacterAction;
 import de.dhbw.ase.simpsons.domain.homes.EvergreenTerrace;
 import de.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
+import de.dhbw.ase.simpsons.domain.transport.PersonalTransport;
 
 public class Maggie extends SimpsonsCharacter implements CharacterAction {
 
@@ -26,6 +27,7 @@ public class Maggie extends SimpsonsCharacter implements CharacterAction {
         giveQuote();
         playWithRattle();
         maggieFood();
+        maggieTransport();
     }
 
     @Override
@@ -105,6 +107,11 @@ public class Maggie extends SimpsonsCharacter implements CharacterAction {
         ConsumerGood maggieFood = ConsumerGood.BOTTLE;
         favoriteFood(maggieFood);
 
+    }
+
+    public void maggieTransport() {
+        PersonalTransport maggieTransport = PersonalTransport.MAGGIECAR;
+        personalTransport(maggieTransport);
     }
 }
 

@@ -3,6 +3,7 @@ package de.dhbw.ase.simpsons.domain.charakters;
 import de.dhbw.ase.simpsons.application.CharacterAction;
 import de.dhbw.ase.simpsons.domain.homes.ComicStore;
 import de.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
+import de.dhbw.ase.simpsons.domain.transport.PersonalTransport;
 
 public class ComicBookGuy extends SimpsonsCharacter implements CharacterAction {
     public ComicBookGuy() {
@@ -23,6 +24,9 @@ public class ComicBookGuy extends SimpsonsCharacter implements CharacterAction {
         printPicture();
         presentHomeAndWorkplace();
         giveQuote();
+        protectComics();
+        comicFood();
+        guyTransport();
     }
 
     @Override
@@ -95,9 +99,18 @@ public class ComicBookGuy extends SimpsonsCharacter implements CharacterAction {
         System.out.println("Famous Quote: \"I'm not a nerd, I'm a collector of rare and valuable things.\"");
     }
 
+    public void protectComics() {
+        System.out.println("He will protect his comics with his life from greasy children's hands!");
+    }
+
     public void comicFood() {
         ConsumerGood comicFood = ConsumerGood.PIZZA;
         favoriteFood(comicFood);
 
+    }
+
+    public void guyTransport() {
+        PersonalTransport guyTransport = PersonalTransport.GUYCAR;
+        personalTransport(guyTransport);
     }
 }

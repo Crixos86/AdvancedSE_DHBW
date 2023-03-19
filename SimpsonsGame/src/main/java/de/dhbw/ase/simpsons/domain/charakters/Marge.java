@@ -3,6 +3,7 @@ package de.dhbw.ase.simpsons.domain.charakters;
 import de.dhbw.ase.simpsons.application.CharacterAction;
 import de.dhbw.ase.simpsons.domain.homes.EvergreenTerrace;
 import de.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
+import de.dhbw.ase.simpsons.domain.transport.PersonalTransport;
 import de.dhbw.ase.simpsons.domain.workplaces.SpringfieldSchool;
 
 public class Marge extends SimpsonsCharacter implements CharacterAction {
@@ -28,6 +29,7 @@ public class Marge extends SimpsonsCharacter implements CharacterAction {
         giveQuote();
         bakeCake();
         margeFood();
+        margeTransport();
     }
 
     @Override
@@ -133,5 +135,10 @@ public class Marge extends SimpsonsCharacter implements CharacterAction {
         ConsumerGood margeFood = ConsumerGood.SALAD;
         favoriteFood(margeFood);
 
+    }
+
+    public void margeTransport() {
+        PersonalTransport margeTransport = PersonalTransport.MARGECAR;
+        personalTransport(margeTransport);
     }
 }

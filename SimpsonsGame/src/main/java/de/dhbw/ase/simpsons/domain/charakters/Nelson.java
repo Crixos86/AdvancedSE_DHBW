@@ -4,6 +4,7 @@ import de.dhbw.ase.simpsons.application.CharacterAction;
 import de.dhbw.ase.simpsons.domain.homes.EvergreenTerrace;
 import de.dhbw.ase.simpsons.domain.homes.NelsonsTrailer;
 import de.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
+import de.dhbw.ase.simpsons.domain.transport.PersonalTransport;
 import de.dhbw.ase.simpsons.domain.workplaces.SpringfieldSchool;
 
 public class Nelson extends SimpsonsCharacter implements CharacterAction {
@@ -28,6 +29,7 @@ public class Nelson extends SimpsonsCharacter implements CharacterAction {
         laugh();
         giveQuote();
         nelsonFood();
+        nelsonTransport();
     }
 
     @Override
@@ -101,6 +103,11 @@ public class Nelson extends SimpsonsCharacter implements CharacterAction {
         ConsumerGood nelsonFood = ConsumerGood.TEARS;
         favoriteFood(nelsonFood);
 
+    }
+
+    public void nelsonTransport() {
+        PersonalTransport nelsonTransport = PersonalTransport.NELSONCAR;
+        personalTransport(nelsonTransport);
     }
 }
 

@@ -1,6 +1,7 @@
 package de.dhbw.ase.simpsons.domain.charakters;
 
 import de.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
+import de.dhbw.ase.simpsons.domain.transport.PersonalTransport;
 
 public class SimpsonsCharacter {
 
@@ -56,6 +57,10 @@ public class SimpsonsCharacter {
 
     public void favoriteFood(ConsumerGood food) {
         System.out.println(name + "s' favourite food is: " + food );
+    }
+
+    public void personalTransport(PersonalTransport transport) {
+        System.out.println(name + "s' preferred method of transportation is: " + transport );
     }
 
 }

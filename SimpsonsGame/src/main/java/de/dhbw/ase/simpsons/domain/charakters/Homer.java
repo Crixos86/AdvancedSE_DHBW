@@ -3,6 +3,7 @@ package de.dhbw.ase.simpsons.domain.charakters;
 import de.dhbw.ase.simpsons.application.CharacterAction;
 import de.dhbw.ase.simpsons.domain.homes.EvergreenTerrace;
 import de.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
+import de.dhbw.ase.simpsons.domain.transport.PersonalTransport;
 import de.dhbw.ase.simpsons.domain.workplaces.NukularPowerPlant;
 import de.dhbw.ase.simpsons.domain.workplaces.SpringfieldSchool;
 
@@ -23,6 +24,7 @@ public class Homer extends SimpsonsCharacter implements CharacterAction {
         presentHomeAndWorkplace();
         giveQuote();
         homerFood();
+        homerTransport();
     }
 
     @Override
@@ -129,5 +131,10 @@ public class Homer extends SimpsonsCharacter implements CharacterAction {
         ConsumerGood homerFood = ConsumerGood.DONUT;
         favoriteFood(homerFood);
 
+    }
+
+    public void homerTransport() {
+        PersonalTransport homerTransport = PersonalTransport.HOMERCAR;
+        personalTransport(homerTransport);
     }
 }
