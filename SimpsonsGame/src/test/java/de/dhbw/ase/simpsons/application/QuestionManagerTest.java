@@ -12,12 +12,10 @@ public class QuestionManagerTest {
 
     @Test
     public void testAskQuestions() {
-        // Prepare input stream with mock user input
-        // String mockInput = "y\nn\ny\nn\ny\nn\ny\nn\ny\nn\ny\nn\ny\nn\ny\nn\ny\nn\ny\nn\n";
 
         // Create a new instance of QuestionManager
         QuestionManager questionManager = new QuestionManager();
-
+        // Prepare input stream with mock user input
         int size = questionManager.charToName.size() * 2; // Größe der Map * 2 (jede Antwort hat 2 Zeichen)
         StringBuilder mockInputBuilder = new StringBuilder(size); // StringBuilder mit der Größe der Map initialisieren
         Random random = new Random();

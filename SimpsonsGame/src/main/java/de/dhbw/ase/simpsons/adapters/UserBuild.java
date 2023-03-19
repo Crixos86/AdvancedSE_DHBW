@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class UserBuild  extends QuestionManager{
 
-    private static final Map<Character, Runnable> actions = Map.of(
+    protected static final Map<Character, Runnable> actions = Map.of(
             'H', () -> new Homer().introduce(),
             'M', () -> new Marge().introduce(),
             'L', () -> new Lisa().introduce(),
