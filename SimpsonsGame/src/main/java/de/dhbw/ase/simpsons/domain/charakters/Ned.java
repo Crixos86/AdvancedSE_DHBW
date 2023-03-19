@@ -45,7 +45,7 @@ public class Ned extends SimpsonsCharacter implements CharacterAction {
 
     @Override
     public void presentHomeAndWorkplace() {
-        System.out.println("I live in a beatiful home at: \n");
+        System.out.println("I live in a beautiful home at: \n");
         FlandersHome flandersHome = new FlandersHome();
         flandersHome.listFeatures();
         flandersHome.takeTour();
