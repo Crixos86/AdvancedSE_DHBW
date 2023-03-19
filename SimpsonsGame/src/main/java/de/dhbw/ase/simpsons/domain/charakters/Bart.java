@@ -1,6 +1,8 @@
 package de.dhbw.ase.simpsons.domain.charakters;
 
 import de.dhbw.ase.simpsons.application.CharacterAction;
+import de.dhbw.ase.simpsons.domain.charakters.pictures.ApuPicture;
+import de.dhbw.ase.simpsons.domain.charakters.pictures.BartPicture;
 import de.dhbw.ase.simpsons.domain.homes.EvergreenTerrace;
 import de.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
 import de.dhbw.ase.simpsons.domain.transport.PersonalTransport;
@@ -49,50 +51,7 @@ public class Bart extends SimpsonsCharacter implements CharacterAction {
 
     @Override
     public void printPicture() {
-        String[] Picture = {
-                "\n",
-                "              .#+: .*#  .=.",
-                "              =*-#**-#=+*=% .++",
-                "              %---=--=*=--%**-++=*#:  .",
-                "             =*-----------=----#=-=#=**#",
-                "             %---------------------+=--#+**#.",
-                "            =*-------------------------+=--*+++*",
-                "            %------------------------------=+--#.",
-                "           ++----------------------------------#+**%",
-                "          .%-------------------------------------+*.",
-                "          #+------------------------------------+*",
-                "         =#------------------------------------+*",
-                "        **------------------------------------=#",
-                "       #====---------------------------------=#",
-                "     =++=---+**=-----------------------------%.",
-                "   -*:        .+*+*+=====+*+----------------#:",
-                "  :*           :#-         :*+-------------#-",
-                "  +-    #     -*.            +*-----------++",
-                "  -%%:        %.              %=---------=#",
-                "   *%+===-:. .@*+    #        #+---------%.",
-                "  =*-----=+**+@@#.           .%---------#-",
-                "  *+-----------#-           :#=--------+*",
-                "   %*=----------+*=.     .-**----------%",
-                "  =*-+***---------=+*+++++=-----------#:",
-                " :%-------------------------------***##",
-                " #=--------------------------------=+++*",
-                "++--------------------------------*+*#-%",
-                "+*------------------------------=*=-==*+",
-                " .=**=---------------------------=*%+-.",
-                "    .-=+*+=--------------*+-------=#",
-                "         .:=+#***********+**------*=",
-                "            -*+=-----------------#:",
-                "               *=----------------#:",
-                "               *#----------------%*:"
-        };
-        for (String line : Picture) {
-            System.out.println(line);
-            try {
-                Thread.sleep(500); // pause for 1 second while printing the picture
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+        printPicture(BartPicture.Picture);
     }
 
     public void bartFood() {

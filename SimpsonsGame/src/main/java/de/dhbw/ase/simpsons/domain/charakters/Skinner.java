@@ -1,6 +1,9 @@
 package de.dhbw.ase.simpsons.domain.charakters;
 
 import de.dhbw.ase.simpsons.application.CharacterAction;
+import de.dhbw.ase.simpsons.domain.charakters.pictures.ApuPicture;
+import de.dhbw.ase.simpsons.domain.charakters.pictures.NelsonPicture;
+import de.dhbw.ase.simpsons.domain.charakters.pictures.SkinnerPicture;
 import de.dhbw.ase.simpsons.domain.homes.EvergreenTerrace;
 import de.dhbw.ase.simpsons.domain.homes.SkinnersHome;
 import de.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
@@ -32,52 +35,7 @@ public class Skinner extends SimpsonsCharacter implements CharacterAction {
 
     @Override
     public void printPicture() {
-        String[] Picture = {
-"\n",
-"                                    .:--======-:.                               ",
-"                                  .-=++++++++++++++*+-:                         ",
-"                               .=*+++++++++++++++++++++*=:   :-==.              ",
-"                             .=*+++++++++++++++++++++++++++=**+:                ",
-"                            -+*+++++++++++++++++++++++++++++++++#*-             ",
-"                       .-=*++++++++++++++++++++++++++++++++++++*==.             ",
-"                    :=++++++++++++++++++++++++++++++++**+*#*+++*-               ",
-"                     .:-==+++++*+***++++++++++++++**++==**++++++++:             ",
-"                              +-----=+++********++=--=*+++++++++++++            ",
-"                             ------------------------*++++++++++++++=           ",
-"                             +-----------------------=**++++++++++++=           ",
-"                            ----------------=+===------=#++++++++++*.           ",
-"                          .==-------------=+------------*+++++++++*-            ",
-"                          -==-::::-=-------=--:::-=-----*++++++++*:             ",
-"                          .-  .    .+-----+.       ==--**+++*++*+               ",
-"                          -   -    -=------   :.    +-*+++*+----=-              ",
-"                           =:.    ==------=:      .=-=*++*+-=+=--=-             ",
-"                           ======*=--------+=----==--=*++*-=*----=:             ",
-"                            ==--+=---------=++===-----***+--=+--=:              ",
-"                            ---=+--------------==------------+-+.               ",
-"                            =--*--------==--------------------+.                ",
-"                           .=--+---------*-------------------=:                 ",
-"                          .=---===========--==----------=---=-                  ",
-"                         .=------------------=+----------+:.                    ",
-"                        -=--------------------==----------                      ",
-"                       .+----------------------+--------+.                      ",
-"                        +----------------------+=-------+                       ",
-"                         :---===================+=------+                       ",
-"                                =--===------------=+-----+                      ",
-"                                :==----------------------=:                     ",
-"                                 :=----------------------+.                     ",
-"                                .-*----------------------*#+-                   ",
-"                              :+*+%=-------------------+++*+++-.                ",
-"                           :-+*++##+---------------=+++===*+++***+=-.           ",
-"                      .-=+***+++**=++=--------==++++======#++++#+++++*+=-.      "
-        };
-        for (String line : Picture) {
-            System.out.println(line);
-            try {
-                Thread.sleep(500); // Pause von einer Sekunde zwischen jeder Zeile
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+        printPicture(SkinnerPicture.Picture);
     }
 
     @Override
