@@ -3,6 +3,7 @@ package de.dhbw.ase.simpsons.domain.charakters;
 import de.dhbw.ase.simpsons.application.CharacterAction;
 import de.dhbw.ase.simpsons.domain.homes.EvergreenTerrace;
 import de.dhbw.ase.simpsons.domain.homes.NelsonsTrailer;
+import de.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
 import de.dhbw.ase.simpsons.domain.workplaces.SpringfieldSchool;
 
 public class Nelson extends SimpsonsCharacter implements CharacterAction {
@@ -26,6 +27,7 @@ public class Nelson extends SimpsonsCharacter implements CharacterAction {
         bullyStudents();
         laugh();
         giveQuote();
+        nelsonFood();
     }
 
     @Override
@@ -93,6 +95,12 @@ public class Nelson extends SimpsonsCharacter implements CharacterAction {
     @Override
     public void giveQuote() {
         System.out.println("Famous Quote: \"Ha ha!\"");
+    }
+
+    public void nelsonFood() {
+        ConsumerGood nelsonFood = ConsumerGood.TEARS;
+        favoriteFood(nelsonFood);
+
     }
 }
 

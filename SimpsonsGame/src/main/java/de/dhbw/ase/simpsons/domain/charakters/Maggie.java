@@ -2,6 +2,7 @@ package de.dhbw.ase.simpsons.domain.charakters;
 
 import de.dhbw.ase.simpsons.application.CharacterAction;
 import de.dhbw.ase.simpsons.domain.homes.EvergreenTerrace;
+import de.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
 
 public class Maggie extends SimpsonsCharacter implements CharacterAction {
 
@@ -24,6 +25,7 @@ public class Maggie extends SimpsonsCharacter implements CharacterAction {
         suckThumb();
         giveQuote();
         playWithRattle();
+        maggieFood();
     }
 
     @Override
@@ -97,6 +99,12 @@ public class Maggie extends SimpsonsCharacter implements CharacterAction {
     @Override
     public void giveQuote() {
         System.out.println("Famous Quote: \"Tschop Tschop\"");
+    }
+
+    public void maggieFood() {
+        ConsumerGood maggieFood = ConsumerGood.BOTTLE;
+        favoriteFood(maggieFood);
+
     }
 }
 

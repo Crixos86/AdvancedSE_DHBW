@@ -2,6 +2,7 @@ package de.dhbw.ase.simpsons.domain.charakters;
 
 import de.dhbw.ase.simpsons.application.CharacterAction;
 import de.dhbw.ase.simpsons.domain.homes.EvergreenTerrace;
+import de.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
 import de.dhbw.ase.simpsons.domain.workplaces.SpringfieldSchool;
 
 import javax.swing.*;
@@ -24,6 +25,7 @@ public class Bart extends SimpsonsCharacter implements CharacterAction {
         printPicture();
         presentHomeAndWorkplace();
         giveQuote();
+        bartFood();
     }
 
     @Override
@@ -89,6 +91,12 @@ public class Bart extends SimpsonsCharacter implements CharacterAction {
                 e.printStackTrace();
             }
         }
+    }
+
+    public void bartFood() {
+        ConsumerGood bartFood = ConsumerGood.SQUISHY;
+        favoriteFood(bartFood);
+
     }
 
 }

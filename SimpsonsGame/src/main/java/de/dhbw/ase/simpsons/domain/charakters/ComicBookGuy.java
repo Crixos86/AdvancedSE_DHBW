@@ -2,6 +2,7 @@ package de.dhbw.ase.simpsons.domain.charakters;
 
 import de.dhbw.ase.simpsons.application.CharacterAction;
 import de.dhbw.ase.simpsons.domain.homes.ComicStore;
+import de.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
 
 public class ComicBookGuy extends SimpsonsCharacter implements CharacterAction {
     public ComicBookGuy() {
@@ -92,5 +93,11 @@ public class ComicBookGuy extends SimpsonsCharacter implements CharacterAction {
     @Override
     public void giveQuote() {
         System.out.println("Famous Quote: \"I'm not a nerd, I'm a collector of rare and valuable things.\"");
+    }
+
+    public void comicFood() {
+        ConsumerGood comicFood = ConsumerGood.PIZZA;
+        favoriteFood(comicFood);
+
     }
 }

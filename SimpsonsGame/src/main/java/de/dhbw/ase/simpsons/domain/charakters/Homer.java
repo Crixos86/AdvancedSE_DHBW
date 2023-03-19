@@ -2,6 +2,7 @@ package de.dhbw.ase.simpsons.domain.charakters;
 
 import de.dhbw.ase.simpsons.application.CharacterAction;
 import de.dhbw.ase.simpsons.domain.homes.EvergreenTerrace;
+import de.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
 import de.dhbw.ase.simpsons.domain.workplaces.NukularPowerPlant;
 import de.dhbw.ase.simpsons.domain.workplaces.SpringfieldSchool;
 
@@ -21,6 +22,7 @@ public class Homer extends SimpsonsCharacter implements CharacterAction {
         printPicture();
         presentHomeAndWorkplace();
         giveQuote();
+        homerFood();
     }
 
     @Override
@@ -121,5 +123,11 @@ public class Homer extends SimpsonsCharacter implements CharacterAction {
     @Override
     public void giveQuote() {
         System.out.println("Famous Quote: \"D'oh!\"");
+    }
+
+    public void homerFood() {
+        ConsumerGood homerFood = ConsumerGood.DONUT;
+        favoriteFood(homerFood);
+
     }
 }

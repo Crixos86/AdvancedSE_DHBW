@@ -3,7 +3,7 @@ package de.dhbw.ase.simpsons.domain.luxuryfood;
 public enum ConsumerGood {
     DONUT("Donuts"),
     SQUISHY("Squishy"),
-    LEMONADE("Lemonade"),
+    BURGER("a almost fresh delicious Krusty burger"),
     PIZZA("Pizza"),
     TOFU("Tofu"),
     WORK("Nothing, because there is work to do"),

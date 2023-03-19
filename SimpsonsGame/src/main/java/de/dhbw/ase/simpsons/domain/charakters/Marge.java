@@ -2,6 +2,7 @@ package de.dhbw.ase.simpsons.domain.charakters;
 
 import de.dhbw.ase.simpsons.application.CharacterAction;
 import de.dhbw.ase.simpsons.domain.homes.EvergreenTerrace;
+import de.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
 import de.dhbw.ase.simpsons.domain.workplaces.SpringfieldSchool;
 
 public class Marge extends SimpsonsCharacter implements CharacterAction {
@@ -26,6 +27,7 @@ public class Marge extends SimpsonsCharacter implements CharacterAction {
         careForChildren();
         giveQuote();
         bakeCake();
+        margeFood();
     }
 
     @Override
@@ -125,5 +127,11 @@ public class Marge extends SimpsonsCharacter implements CharacterAction {
     @Override
     public void giveQuote() {
         System.out.println("Famous Quote: \"They just Made A Terrible Life Choice.\"");
+    }
+
+    public void margeFood() {
+        ConsumerGood margeFood = ConsumerGood.SALAD;
+        favoriteFood(margeFood);
+
     }
 }

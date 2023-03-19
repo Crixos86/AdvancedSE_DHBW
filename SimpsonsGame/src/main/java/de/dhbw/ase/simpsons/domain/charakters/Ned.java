@@ -3,6 +3,7 @@ package de.dhbw.ase.simpsons.domain.charakters;
 import de.dhbw.ase.simpsons.application.CharacterAction;
 import de.dhbw.ase.simpsons.domain.homes.EvergreenTerrace;
 import de.dhbw.ase.simpsons.domain.homes.FlandersHome;
+import de.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
 import de.dhbw.ase.simpsons.domain.workplaces.Leftorium;
 import de.dhbw.ase.simpsons.domain.workplaces.SpringfieldSchool;
 
@@ -28,7 +29,7 @@ public class Ned extends SimpsonsCharacter implements CharacterAction {
         presentHomeAndWorkplace();
         beFriendly();
         giveQuote();
-
+        nedFood();
     }
 
     @Override
@@ -109,5 +110,11 @@ public class Ned extends SimpsonsCharacter implements CharacterAction {
     @Override
     public void giveQuote() {
         System.out.println("Famous Quote: \"Hi diddly ho neighborino.\"");
+    }
+
+    public void nedFood() {
+        ConsumerGood nedFood = ConsumerGood.BREAD;
+        favoriteFood(nedFood);
+
     }
 }
