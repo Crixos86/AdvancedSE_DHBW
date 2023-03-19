@@ -7,8 +7,8 @@ import de.dhbw.ase.simpsons.adapters.UserBuild;
 public class SimpsonsTerminal {
     public static void main(String[] args) {
         GameTerminal.printBanner();
-        UserBuild.performActionBasedOnAnswers();
-
+        //UserBuild.performActionBasedOnAnswers();
+        GameTerminal.printOutput();
 
     }
 }

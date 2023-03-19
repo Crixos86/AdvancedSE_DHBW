@@ -40,7 +40,7 @@ public class Skinner extends SimpsonsCharacter implements CharacterAction {
 
     @Override
     public void presentHomeAndWorkplace() {
-        System.out.println("I live in a beatiful home at: \n");
+        System.out.println("I live in a beautiful home at: \n");
         SkinnersHome skinnersHome = new SkinnersHome();
         skinnersHome.listFeatures();
         skinnersHome.takeTour();
