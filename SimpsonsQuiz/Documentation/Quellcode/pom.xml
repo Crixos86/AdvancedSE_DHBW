@@ -1,0 +1,5 @@
+        <dependency>
+            <groupId>com.dhbw.ase</groupId>
+            <artifactId>application-2</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>

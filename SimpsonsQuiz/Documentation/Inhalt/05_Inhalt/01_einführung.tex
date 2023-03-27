@@ -1,0 +1,27 @@
+\chapter{Einführung}
+
+\section{Übersicht über die Applikation}
+% Was macht die Applikation? Wie funktioniert sie? Welches Problem löst sie/welchen Zweck hat sie?
+Die Fernsehserie 'Die Simpsons' ist eine US-amerikanische Zeichentrickserie, die seit 1989 ausgestrahlt wird und mittlerweile über 700 Episoden hat. Die Serie handelt von der Familie Simpson, bestehend aus Homer, Marge, Bart, Lisa und Maggie, sowie zahlreichen Nebenfiguren, die in der fiktiven Stadt Springfield leben. Die Simpsons zeichnet sich durch ihren satirischen und humorvollen Stil aus, der sowohl politische als auch soziale Themen behandelt. Die Serie parodiert oft bekannte Filme, Serien, Persönlichkeiten und Institutionen und enthält viele popkulturelle Referenzen. Die Simpsons wurde mit zahlreichen Preisen ausgezeichnet, darunter 34 Emmy Awards, und gilt als eine der erfolgreichsten Fernsehserien aller Zeiten. Die Serie wurde in mehr als 100 Ländern ausgestrahlt und hat eine große Fangemeinde auf der ganzen Welt.\cite{simpsons.2023}
+\newline
+Die Applikation Simpsons-Quiz ist ein Terminal-basierendes Minispiel. Durch gezielte Fragen, welche User:innen mittels Tastatureingaben beantworten, soll bestimmt werden, durch welchen Charakter des Simpsons Universum er oder sie am ehesten repräsentiert wird. Zusätzlich werden Informationen über den Zielcharakter ausgegeben. Dies umfasst den Wohnort, den Arbeitsplatz, die Art der Fortbewegung und das Lieblingsessen der Simpsons-Figur. Zusätzlich werden individuelle, charakterspezifische Fakten präsentiert. \newline
+Die visuelle Ausgabe im Terminal wird durch eine \ac{ASCII}- Repräsentation des verifizierten Charakterbildes unterstützt. Nachdem alle Fragen beantwortet wurden und der oder die User:in seinen Simpsons-Charakter mit Erläuterungen erhalten hat, werden alle Informationen zusätzlich in einer Textdatei abgelegt um sie später noch einmal nachlesen zu können.
+\newpage
+\section{Start der Applikation}
+% Wie startet man die Applikation? Welche Voraussetzungen werden benötigt? Schritt-für-Schritt-Anleitung
+Zum Start der Applikation sind folgende Voraussetzungen notwendig:
+\begin{itemize}
+    \item Das \ac{JDK} um den Code kompilieren und auszuführen zu können.
+    \item Ein \ac{IDE} um die Ausführung des Codes komfortabler zu gestalten.
+\end{itemize}
+Um die Applikation zu starten kann der Code innerhalb einer \ac{IDE} der Wahl geöffnet werden. Danach muss die Java Klasse 'SimpsonsTerminal' im Ordner 'SimpsonsQuiz/plugin-0/src/main/java/com/dhbw/ase/simpsons/plugin/SimpsonsTerminal.java' ausgeführt werden. Alle Interaktionen der Applikation mit dem User erfolgen anhand einer textbasierten Ausgabe über das Terminal der \ac{IDE}. Im Anschluss an die Ausführung der Applikation wird eine Textdatei mit dem Namen 'YourCharacter.txt' erstellt. Diese enthält alle Informationen über den Simpsons-Charakter, welcher durch die Antworten des Users bestimmt wurde und im Terminal zu sehen waren. 
+
+\section{Testen der Applikation}
+% Wie testet man die Applikation? Welche Voraussetzungen werden benötigt? Schritt-für-Schritt-Anleitung
+Um die Applikation zu testen gelten folgende Voraussetzungen:
+\begin{itemize}
+    \item Maven ist installiert
+    \item Optional: Die \ac{IDE} IntelliJ ist installiert
+\end{itemize}
+Zum Start des Test ist sicherzustellen, dass der Code in der \ac{IDE} der Wahl geöffnet ist. Danach können alle Tests-Klassen im Verzeichnis unter:\newline SimpsonsGame/src/test/java/de/dhbw/ase/simpsons gefunden und einzeln ausgeführt werden. \newline
+Alternativ kann im Wurzelverzeichnis 'SimpsonsGame' auch die Kommandozeile geöffnet werden und mit dem Befehl 'mvn test' alle Tests ausgeführt werden. \newline

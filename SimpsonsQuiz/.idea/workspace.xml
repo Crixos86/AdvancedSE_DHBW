@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="56c34afe-4769-46f8-88e3-b6ebd5f8a111" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adapters-1/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adapters-1/src/main/java/com/dhbw/ase/simpsons/adapters/GameTerminal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adapters-1/src/main/java/com/dhbw/ase/simpsons/adapters/MultiOutputStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adapters-1/src/main/java/com/dhbw/ase/simpsons/adapters/UserBuild.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adapters-1/src/main/java/com/dhbw/ase/simpsons/adapters/adaptersinfo.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application-2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application-2/src/main/java/com/dhbw/ase/simpsons/application/Question.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application-2/src/main/java/com/dhbw/ase/simpsons/application/QuestionManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application-2/src/main/java/com/dhbw/ase/simpsons/application/applicationinfos.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/charakters/Apu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/charakters/Bart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/charakters/CharacterAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/charakters/ComicBookGuy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/charakters/Homer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/charakters/Lisa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/charakters/Maggie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/charakters/Marge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/charakters/Ned.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/charakters/Nelson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/charakters/SimpsonsCharacter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/charakters/Skinner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/charakters/pictures/ApuPicture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/charakters/pictures/BartPicture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/charakters/pictures/GuyPicture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/charakters/pictures/HomerPicture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/charakters/pictures/LisaPicture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/charakters/pictures/MaggiePicture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/charakters/pictures/MargePicture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/charakters/pictures/NedPicture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/charakters/pictures/NelsonPicture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/charakters/pictures/SkinnerPicture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/domaininfo.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/homes/ApusHome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/homes/ComicStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/homes/EvergreenTerrace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/homes/FlandersHome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/homes/Home.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/homes/HomeFeatures.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/homes/NelsonsTrailer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/homes/SkinnersHome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/luxuryfood/ConsumerGood.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/transport/PersonalTransport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/workplaces/KwikEMart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/workplaces/Leftorium.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/workplaces/NukularPowerPlant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/workplaces/PoliceStation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/workplaces/SpringfieldSchool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/workplaces/WorkplaceFeatures.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain-3/src/main/java/com/dhbw/ase/simpsons/domain/workplaces/Workplaces.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugin-0/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugin-0/src/main/java/com/dhbw/ase/simpsons/plugin/SimpsonsTerminal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugin-0/src/main/java/com/dhbw/ase/simpsons/plugin/plugininfo.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2NPTQWd3aZP3Mk3DPKddKqJXMV7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "openjdk-18",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="SimpsonsTerminal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dhbw.ase.simpsons.plugin.SimpsonsTerminal" />
+      <module name="plugin-0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dhbw.ase.simpsons.plugin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SimpsonsTerminal" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="56c34afe-4769-46f8-88e3-b6ebd5f8a111" name="Changes" comment="" />
+      <created>1679564702095</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679564702095</updated>
+      <workItem from="1679564703652" duration="2850000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
