@@ -3,7 +3,7 @@ package com.dhbw.ase.simpsons.adapters;
 import java.io.IOException;
 import java.io.OutputStream;
 
-class MultiOutputStream extends OutputStream {
+public class MultiOutputStream extends OutputStream {
     private OutputStream[] outputStreams;
 
     public MultiOutputStream(OutputStream... outputStreams) {

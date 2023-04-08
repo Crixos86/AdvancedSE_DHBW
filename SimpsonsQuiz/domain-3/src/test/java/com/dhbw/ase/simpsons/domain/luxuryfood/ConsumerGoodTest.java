@@ -9,7 +9,7 @@ public class ConsumerGoodTest {
     public void testToString() {
         assertEquals("Donuts", ConsumerGood.DONUT.toString());
         assertEquals("Squishy", ConsumerGood.SQUISHY.toString());
-        assertEquals("a almost fresh delicious Krusty burger", ConsumerGood.BURGER.toString());
+        assertEquals("an almost fresh delicious Krusty burger", ConsumerGood.BURGER.toString());
         assertEquals("Pizza", ConsumerGood.PIZZA.toString());
         assertEquals("Tofu", ConsumerGood.TOFU.toString());
         assertEquals("Nothing, because there is work to do", ConsumerGood.WORK.toString());

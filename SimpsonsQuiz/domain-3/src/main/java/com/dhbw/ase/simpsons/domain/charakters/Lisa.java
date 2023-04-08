@@ -19,7 +19,7 @@ public class Lisa extends SimpsonsCharacter implements CharacterAction {
 
     @Override
     public void introduce() {
-        System.out.printf("Hi, my name is %s and I am %d years old. I am a %s.", name, age, job);
+        System.out.printf("Hi, my name is %s, and I am %d years old. I am a %s.", name, age, job);
         printPicture();
         presentHomeAndWorkplace();
         playSaxophone();
