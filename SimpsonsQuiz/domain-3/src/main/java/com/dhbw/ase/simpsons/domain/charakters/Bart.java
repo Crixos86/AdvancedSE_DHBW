@@ -6,7 +6,7 @@ import com.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
 import com.dhbw.ase.simpsons.domain.transport.PersonalTransport;
 import com.dhbw.ase.simpsons.domain.workplaces.SpringfieldSchool;
 
-public class Bart extends SimpsonsCharacter implements CharacterAction {
+public final class Bart extends SimpsonsCharacter implements CharacterAction {
 
     public Bart() {
         super("Bart", 10, "Student");

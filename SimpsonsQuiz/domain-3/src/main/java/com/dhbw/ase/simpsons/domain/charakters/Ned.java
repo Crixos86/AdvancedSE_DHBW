@@ -7,7 +7,7 @@ import com.dhbw.ase.simpsons.domain.transport.PersonalTransport;
 import com.dhbw.ase.simpsons.domain.workplaces.Leftorium;
 
 
-public class Ned extends SimpsonsCharacter implements CharacterAction {
+public final class Ned extends SimpsonsCharacter implements CharacterAction {
 
     public Ned() {
         super("Ned", 42, "Homer's Neighbor and Prayer");

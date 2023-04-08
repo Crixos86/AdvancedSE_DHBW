@@ -7,7 +7,7 @@ import com.dhbw.ase.simpsons.domain.transport.PersonalTransport;
 
 
 
-public class Marge extends SimpsonsCharacter implements CharacterAction {
+public final class Marge extends SimpsonsCharacter implements CharacterAction {
 
     public Marge() {
         super("Marge", 34, "Housewife");

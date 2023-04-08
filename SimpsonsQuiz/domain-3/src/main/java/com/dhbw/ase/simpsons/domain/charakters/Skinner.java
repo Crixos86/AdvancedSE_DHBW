@@ -6,7 +6,7 @@ import com.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
 import com.dhbw.ase.simpsons.domain.transport.PersonalTransport;
 import com.dhbw.ase.simpsons.domain.workplaces.SpringfieldSchool;
 
-public class Skinner extends SimpsonsCharacter implements CharacterAction {
+public final class Skinner extends SimpsonsCharacter implements CharacterAction {
     public Skinner() {
         super("Skinner", 54, "School Principal");
     }

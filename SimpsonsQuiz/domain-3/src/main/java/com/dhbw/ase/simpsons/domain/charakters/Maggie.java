@@ -5,7 +5,7 @@ import com.dhbw.ase.simpsons.domain.homes.EvergreenTerrace;
 import com.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
 import com.dhbw.ase.simpsons.domain.transport.PersonalTransport;
 
-public class Maggie extends SimpsonsCharacter implements CharacterAction {
+public final class Maggie extends SimpsonsCharacter implements CharacterAction {
 
     public Maggie() {
         super("Maggie", 1, "Infant");

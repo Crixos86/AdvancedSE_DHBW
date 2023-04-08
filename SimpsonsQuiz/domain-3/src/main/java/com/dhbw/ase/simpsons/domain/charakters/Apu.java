@@ -6,7 +6,7 @@ import com.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
 import com.dhbw.ase.simpsons.domain.transport.PersonalTransport;
 import com.dhbw.ase.simpsons.domain.workplaces.KwikEMart;
 
-public class Apu extends SimpsonsCharacter implements CharacterAction {
+public final class Apu extends SimpsonsCharacter implements CharacterAction {
 
     public Apu() {
         super("Apu", 40, "Kwik-E-Mart Owner");

@@ -5,7 +5,7 @@ import com.dhbw.ase.simpsons.domain.homes.ComicStore;
 import com.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
 import com.dhbw.ase.simpsons.domain.transport.PersonalTransport;
 
-public class ComicBookGuy extends SimpsonsCharacter implements CharacterAction {
+public final class ComicBookGuy extends SimpsonsCharacter implements CharacterAction {
     public ComicBookGuy() {
         super("Comic Book Guy", 45, "Comic Book Store Owner"  );
     }
