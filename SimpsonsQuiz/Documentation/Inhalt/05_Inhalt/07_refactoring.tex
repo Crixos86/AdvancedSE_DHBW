@@ -2,8 +2,60 @@
 
 \section{Code Smells}
 %[jeweils 1 Code-Beispiel zu 2 Code Smells aus der Vorlesung; jeweils Code-Beispiel und einen möglichen Lösungsweg bzw. den genommen Lösungsweg beschreiben (inkl. (Pseudo-)Code)
+Code Smells sind Anzeichen oder Muster in der Software, die auf mögliche Probleme oder schlechte Praktiken im Code hindeuten. Sie sind nicht unbedingt Fehler oder Bugs, können jedoch die Wartbarkeit, Lesbarkeit und Qualität des Codes beeinträchtigen. In diesem Kapitel werden zwei Code Smells im Projekt vorgestellt behoben.
+\subsection{Code Smell: Duplicated Code}
+Das Vorhandensein von ähnlichem oder identischem Code an mehreren Stellen im Projekt kann auf schlechte Modularisierung oder mangelnde Wiederverwendbarkeit hindeuten. Jeder Simpsons Charakter hat neben seinen Attributen und Methoden, welche sein Zuhause oder Transportmittel beschreiben, auch eine Methode welche nachdem der Charakter ausgewählt wurde, ein entsprechendes Bild über das Terminal ausgibt. Dieser Code ist in allen Charakterklassen vorhanden und wird in jeder Klasse aufgerufen. Dieser Code ist also mehrfach vorhanden und kann durch Auslagern in eine Superklasse gelöst werden. Wie in listing \ref{code:Picture} zu sehen wurde die Methode in die Superklasse SimpsonsCharacter ausgelagert und in den jeweiligen Subklassen nur noch aufgerufen.
+\lstinputlisting[
+    label=code:Picture,    % Label; genutzt für Referenzen auf dieses Code-Beispiel
+    caption=Auslagern der Methode printPicture() in die Superklasse SimpsonsCharacter, % Caption; genutzt für Referenzen auf dieses Code-Beispiel
+    captionpos=b,               % Position, an der die Caption angezeigt wird t(op) oder b(ottom)
+    style=EigenerJavaStyle,     % Eigender Style der vor dem Dokument festgelegt wurde
+    firstline=1,                % Zeilennummer im Dokument welche als erste angezeigt wird
+    lastline=10                 % Letzte Zeile welche ins LaTeX Dokument übernommen wird
+]{Quellcode/printpicture.java} 
 
+
+\subsection{Code Smell: Large Class}
+Eine Large Class ist eine Klasse, die zu viele Methoden oder eine große Anzahl von Codezeilen hat. Dies kann ein Anzeichen dafür sein, dass die Klasse zu viele Verantwortlichkeiten trägt. Eine große Klasse kann es schwierig machen, den Code zu verstehen, zu warten und zu erweitern. Um dieses Problem zu lösen, sollte die Klasse in kleinere, fokussierte Klassen aufgeteilt werden, die jeweils eine einzige Verantwortung haben. Im Simpsons Quiz gibt es für jeden Charakter bereits eine separate Klasse. Allerdings war bis vor dem Refactoring die Bilder der Charakter ebenfalls mit in der Klasse gespeichert. Das Auslagern in extra Klassen sorgt für eine deutliche Reduktion der Code Zeilen der Charakter Klassen. Im Folgenden Commit sind die Änderungen zu sehen:
+\url{https://github.com/Crixos86/AdvancedSE_DHBW/commit/2f4d1b47780bfbeddbe100c476d0e97a3478f384}
+\lstinputlisting[
+    label=code:picline,    % Label; genutzt für Referenzen auf dieses Code-Beispiel
+    caption=Lösung der large class, % Caption; genutzt für Referenzen auf dieses Code-Beispiel
+    captionpos=b,               % Position, an der die Caption angezeigt wird t(op) oder b(ottom)
+    style=EigenerJavaStyle,     % Eigender Style der vor dem Dokument festgelegt wurde
+    firstline=1,                % Zeilennummer im Dokument welche als erste angezeigt wird
+    lastline=4                 % Letzte Zeile welche ins LaTeX Dokument übernommen wird
+]{Quellcode/picline.java}
+\newpage
 \section{2 Refactorings}
 % 2 unterschiedliche Refactorings aus der Vorlesung anwenden, begründen, sowie UML vorher/nachher liefern; jeweils auf die Commits verweisen
+Refactorings sind strukturierte Änderungen am Code, die darauf abzielen, die interne Struktur und Qualität des Codes zu verbessern, ohne das äußere Verhalten oder die Funktionalität der Software zu ändern. Das Hauptziel von Refactoring ist es, den Code lesbarer, wartbarer und besser verständlich zu machen, was die Produktivität der
+Entwickler erhöht und die Wahrscheinlichkeit von Fehlern oder Bugs reduziert.
+\subsection{Switch Statements}
+Im Simpsons Quiz wird je nach Antworten des Spielers ein anderer Charakter der Serie ausgewählt. Dies wurde initial durch ein Switch Statement realisiert was aber nicht sehr gut wartbar ist und auch in Teilen gegen das Open Closed Principle verstößt. Der Code wurde, wie in listing \ref{code:Switch}zu sehen, entsprechend angepasst.
+\lstinputlisting[
+    label=code:Switch,    % Label; genutzt für Referenzen auf dieses Code-Beispiel
+    caption=Refactoring des Switch Statements, % Caption; genutzt für Referenzen auf dieses Code-Beispiel
+    captionpos=b,               % Position, an der die Caption angezeigt wird t(op) oder b(ottom)
+    style=EigenerJavaStyle,     % Eigender Style der vor dem Dokument festgelegt wurde
+    firstline=1,                % Zeilennummer im Dokument welche als erste angezeigt wird
+    lastline=16                 % Letzte Zeile welche ins LaTeX Dokument übernommen wird
+]{Quellcode/userbuild.java}
 
-Charakter klassen entzerrt mit einführen einer Superklasse und einem Interface 
+Die Verwendung der Runnable Interfaces und einer Map mit Lambdas bieten gegenüber dem Switch Statement einige Vorteile:
+\begin{itemize}
+    \item Lesbarkeit: Die Verwendung einer Map und Lambdas bietet eine klarere und leichter verständliche Struktur, da sie die Logik zur Ausführung der Aktionen auf einer höheren Abstraktionsebene kapselt.
+    \item Erweiterungen: Es ist einfacher, der Map neue Aktionen hinzuzufügen oder vorhandene Aktionen zu ändern, ohne den gesamten Code umzuschreiben. Im Gegensatz dazu erfordert ein Switch-Statement oft eine umfangreichere Änderung des Codes, um neue Fälle hinzuzufügen oder bestehende zu ändern.
+    \item Open/Closed Principle: Durch die Verwendung einer Map und Lambdas folgt der Code eher dem Open/Closed Principle, das besagt, dass Software-Einheiten (Klassen, Module, Funktionen usw.) für Erweiterungen offen, aber für Modifikationen geschlossen sein sollten. Hier kann die Implementierung leicht erweitert werden, ohne dass der bestehende Code geändert werden muss.
+    \item Effizienz: Da die Map auf Hash-basierten Schlüsseln arbeitet, ist der Zugriff auf die zugehörige Aktion in der Regel schneller als ein Switch-Statement, insbesondere wenn es eine große Anzahl von Fällen gibt.
+    \item Flexibilität: Das Runnable-Interface ermöglicht es, Aktionen sowohl synchron als auch asynchron auszuführen. Wenn beispielsweise eine Aktion in einem neuen Thread ausgeführt wird, kann ein Runnable-Objekt an den Thread-Konstruktor übergeben werden.
+\end{itemize}
+\newpage
+\subsection{Polymorphismus}
+Polymorphismus ist ein grundlegendes Konzept der objektorientierten Programmierung, das es ermöglicht, verschiedene Objekte durch eine gemeinsame Schnittstelle oder Basisklasse zu behandeln. Polymorphismus kann als Refactoring-Technik verwendet werden, um den Code sauberer, modularer und leichter wartbar zu gestalten. Mit Einführung der SimpsonsCharacter Klasse wurden gemeinsame Eigenschaften und Methoden der Charaktere ausgelagert. Im folgenden Commit ist das Refactoring zu sehen: \url{https://github.com/Crixos86/AdvancedSE_DHBW/commit/7a1e0367ca782b108682dd7c3f19ae087445ccfa} \newline
+Folgende Vorteile wurden durch die Einführung der Superklasse erreicht:
+\begin{itemize}
+    \item Bessere Abstraktion: Polymorphismus ermöglicht es, eine gemeinsame Schnittstelle oder Basisklasse für unterschiedliche Verhaltensweisen oder Implementierungen zu definieren. Dies führt zu einer klareren Abstraktion und kapselt die unterschiedlichen Implementierungen besser.
+    \item Erhöhte Wiederverwendbarkeit: Durch die Verwendung von Polymorphismus kann Code, der auf der gemeinsamen Schnittstelle oder Basisklasse basiert, wiederverwendet werden. Dies reduziert die Code-Redundanz und verbessert die Modularität.
+    \item Einfachere Erweiterbarkeit: Mit Polymorphismus können neue Verhaltensweisen oder Implementierungen hinzufügt werden, indem neue Klassen erstellt werden, die die gemeinsame Schnittstelle oder Basisklasse erweitern. Dies verbessert die Erweiterbarkeit des Codes und erleichtert das Hinzufügen neuer Funktionen.
+\end{itemize}
