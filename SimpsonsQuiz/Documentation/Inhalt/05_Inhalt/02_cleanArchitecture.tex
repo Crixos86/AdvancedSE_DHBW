@@ -35,7 +35,7 @@ Als Positiv Beispiel sei an der Stelle die Klasse UserBuild eingeführt, wie in 
 \newpage
 
 \subsection{Negativ-Beispiel}
-Ein Negativ Beispiel oder Verletzung der Dependency Rule lässt sich leider nicht zeigen, da die Dependency Rule in unserem Projekt nicht verletzt wurde. Dies liegt daran, dass die einzelnen Schichten durch Maven verwaltet werden und somit die Abhängigkeiten zwischen den einzelnen Schichten klar definiert sind. Listing \ref{code:pom} zeigt die Abhängigkeiten welche im \ac{POM} der Adapter Schicht festgelegt wurden.\newline
+Ein Negativ Beispiel oder Verletzung der Dependency Rule lässt sich leider nicht zeigen, da die Dependency Rule im Projekt nicht verletzt wurde. Dies liegt daran, dass die einzelnen Schichten durch Maven verwaltet werden und somit die Abhängigkeiten zwischen den einzelnen Schichten klar definiert sind. Listing \ref{code:pom} zeigt die Abhängigkeiten welche im \ac{POM} der Adapter Schicht festgelegt wurden.\newline
 Ein mögliches Negativ Beispiel wäre, wenn zum Beispiel die Klasse Apu aus der Domain Schicht mit der introduce() Methode das Banner der GameTerminal Klasse verwenden würde. Dadurch würde ein Verstoß gegen die Dependency Rule vorliegen, da die Domain Schicht nicht auf die Adapter Schicht zugreifen darf. 
 
 \lstinputlisting[

@@ -1,5 +1,27 @@
 \chapter{Entwurfsmuster}
 % 2 unterschiedliche Entwurfsmuster aus der Vorlesung (oder nach Absprache auch andere) jeweils sinnvoll einsetzen, begründen und UML-Diagramm
-\section{Muster 1}
+\section{Command Pattern}
 
-\section{Muster 2}
+Das Command-Entwurfsmuster ist ein Verhaltensmuster, das darauf abzielt, die Anfrage zur Ausführung einer Aktion von der eigentlichen Ausführung der Aktion zu entkoppeln. Dies wird erreicht, indem die Aktionen in Objekten gekapselt werden, die als Befehle (Commands) bezeichnet werden. Die Klasse UserBuild, wie in listing \ref{code:command} verwendet das Command-Entwurfsmuster in Kombination mit einer Map, um Aktionen basierend auf den Antworten des Benutzers auszuführen. Das Command-Pattern kapselt eine Anfrage als Objekt, in diesem Fall als Runnable Objekt, sodass es leicht übergeben, gespeichert und ausgeführt werden kann. Im 'UserBuild'-Code werden verschiedene Aktionen in einer Map als Runnable-Objekte gespeichert. Jede Aktion wird durch einen Charakter gekennzeichnet. Die Methode performActionBasedOnAnswers() verwendet diese Map, um die entsprechende Aktion basierend auf der Eingabe (dem meistgewählten Charakter) auszuführen. Das Command-Pattern ermöglicht es, die Aktionen und deren Ausführung zu entkoppeln, sodass sie leicht erweitert oder geändert werden können, ohne die Hauptlogik der Anwendung zu beeinflussen. In diesem Fall ermöglicht das Command-Pattern eine saubere und leicht erweiterbare Implementierung für die Verwaltung von Aktionen, die auf Benutzerantworten basieren.
+\newpage
+\lstinputlisting[
+    label=code:command,    % Label; genutzt für Referenzen auf dieses Code-Beispiel
+    caption=Command Pattern der UserBuild Klasse, % Caption; genutzt für Referenzen auf dieses Code-Beispiel
+    captionpos=b,               % Position, an der die Caption angezeigt wird t(op) oder b(ottom)
+    style=EigenerJavaStyle,     % Eigender Style der vor dem Dokument festgelegt wurde
+    firstline=1,                % Zeilennummer im Dokument welche als erste angezeigt wird
+    lastline=34                 % Letzte Zeile welche ins LaTeX Dokument übernommen wird
+]{Quellcode/command.java}
+
+\section{Strategy Pattern}
+Das Strategy-Entwurfsmuster ist ein Verhaltensmuster, das darauf abzielt, eine Familie von austauschbaren Algorithmen zu definieren, die unabhängig von den Clients verwendet werden können, die sie verwenden. Das Strategy-Muster ermöglicht es, den Algorithmus, der von einem Objekt verwendet wird, dynamisch zur Laufzeit zu ändern, ohne das Objekt selbst zu ändern. Die Klasse QuestionManager verwendet, wie in listing \ref{code:strategy} zu sehen, einige Aspekte des Strategy-Musters, indem sie die Fragen und zugehörigen Antworten in einer Map speichert. Dies ermöglicht es, die Fragen und Antworten leicht zu ändern oder zu erweitern, ohne die Hauptlogik der Klasse ändern zu müssen.
+In diesem Fall ist es jedoch nicht vollständig angewendet, da die Algorithmen selbst (die Fragen) direkt in der Klasse definiert sind und keine austauschbaren Strategieobjekte verwendet werden.
+
+\lstinputlisting[
+    label=code:strategy,    % Label; genutzt für Referenzen auf dieses Code-Beispiel
+    caption=Strategy Pattern der QuestionManager Klasse, % Caption; genutzt für Referenzen auf dieses Code-Beispiel
+    captionpos=b,               % Position, an der die Caption angezeigt wird t(op) oder b(ottom)
+    style=EigenerJavaStyle,     % Eigender Style der vor dem Dokument festgelegt wurde
+    firstline=1,                % Zeilennummer im Dokument welche als erste angezeigt wird
+    lastline=104                 % Letzte Zeile welche ins LaTeX Dokument übernommen wird
+]{Quellcode/question.java}
