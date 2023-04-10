@@ -4,9 +4,7 @@ Ein Repository für meine Teilnahme am Kurs "Advanced Software Engineering" der 
 Die Applikation Simpsons-Quiz ist ein Terminal-basierendes Minispiel. Durch gezielte
 Fragen, welche User:innen mittels Tastatureingaben beantworten, soll bestimmt werden,
 durch welchen Charakter des Simpsons Universum er oder sie am ehesten repräsentiert
-wird. Zusätzlich werden Informationen über den Zielcharakter ausgegeben. Dies umfasst
-den Wohnort, den Arbeitsplatz, die Art der Fortbewegung und das Lieblingsessen der
-Simpsons-Figur. Zusätzlich werden individuelle, charakterspezifische Fakten präsentiert.
+wird. Zusätzlich werden individuelle, charakterspezifische Fakten und Informationen präsentiert.
 Die visuelle Ausgabe im Terminal wird durch eine ASCII - Repräsentation des verifizierten Charakterbildes unterstützt.
 Nachdem alle Fragen beantwortet wurden und der oder die User:in seinen Simpsons Charakter mit Erläuterungen erhalten hat, werden alle Informationen zusätzlich in einer
 Textdatei abgelegt um sie später noch einmal nachlesen zu können.
