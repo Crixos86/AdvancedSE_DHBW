@@ -4,9 +4,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 
-public class GameTerminal {
+public class GameTerminal implements Output{
 
-    public static void printBanner() {
+
+
+    public void printBanner() {
         String[] Banner = {
                 " # #####  ##  ##  #######            #####    ######  ##   ##  ######    #####    #####   ##   ##   #####",
                 "## ## ##  ##  ##   ##   #           ##   ##     ##    ### ###   ##  ##  ##   ##  ### ###  ###  ##  ##   ##",
@@ -26,7 +28,7 @@ public class GameTerminal {
         System.out.println("\nWelcome to the Simpsons Game!\nLet me ask you some questions to verify which Simpsons Character you are alike.\n");
     }
 
-    public static void printOutput() {
+    public void printOutput() {
         String filename = "YourCharacter.txt";
         try {
             // Save the original standard output
