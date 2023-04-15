@@ -3,6 +3,7 @@ package com.dhbw.ase.simpsons.domain.transport;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+
 public class PersonalTransportTest {
 
     @Test

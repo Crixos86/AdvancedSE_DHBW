@@ -1,10 +1,11 @@
 package com.dhbw.ase.simpsons.domain.characters;
 import com.dhbw.ase.simpsons.domain.charakters.Apu;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import static org.junit.Assert.assertEquals;
+
 
 public class ApuTest {
 

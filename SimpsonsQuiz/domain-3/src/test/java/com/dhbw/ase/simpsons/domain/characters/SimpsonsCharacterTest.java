@@ -1,16 +1,15 @@
 package com.dhbw.ase.simpsons.domain.characters;
-
-import com.dhbw.ase.simpsons.domain.charakters.SimpsonsCharacter;
-import com.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
-import com.dhbw.ase.simpsons.domain.transport.PersonalTransport;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import com.dhbw.ase.simpsons.domain.charakters.SimpsonsCharacter;
+import com.dhbw.ase.simpsons.domain.luxuryfood.ConsumerGood;
+import com.dhbw.ase.simpsons.domain.transport.PersonalTransport;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class SimpsonsCharacterTest {
 
