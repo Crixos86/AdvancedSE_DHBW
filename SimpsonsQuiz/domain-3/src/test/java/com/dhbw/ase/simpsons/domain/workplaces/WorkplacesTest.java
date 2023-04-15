@@ -1,10 +1,11 @@
 package com.dhbw.ase.simpsons.domain.workplaces;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class WorkplacesTest {
-
     @Test
     void testGettersAndSetters() {
         Workplaces wp = new Workplaces("Nuclear Power Plant", "Springfield", 100, "Mr. Burns");
@@ -24,5 +25,4 @@ public class WorkplacesTest {
         assertEquals(20, wp.getNumberOfEmployees());
         assertEquals("Krusty the Clown", wp.getOwner());
     }
-
 }
